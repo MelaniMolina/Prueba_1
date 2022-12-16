@@ -1,9 +1,11 @@
 import Geometria_1.Circulo;
 import java.lang.Math.*;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
+    static DecimalFormat df = new DecimalFormat("#.00");
 
     public static void main(String[] args) {
         int op = 0;
@@ -24,10 +26,14 @@ public class Main {
                 switch (op) {
                     case 1:
                         Perimetro_Circulo();
+                        Area_Circulo();
+                        Diagonal_Circulo();
                         break;
                     case 2:
+
                         break;
                     case 3:
+
                         break;
                     default:
                         System.out.println("ERROR FUERA DE RANGO");
@@ -49,7 +55,7 @@ public class Main {
         System.out.print("Ingrese el radio del Circulo: ");
         double rad = sc.nextDouble();
         Circulo area = new Circulo(rad, result);
-        System.out.println("El resultado del Area del Circulo es: " + area.getResultado());
+        System.out.println("El resultado del Area del Circulo es: " + df.format(area.getResultado()));
         System.out.println("");
     }
 
@@ -58,7 +64,17 @@ public class Main {
         System.out.print("Ingrese el radio del Circulo: ");
         double radio = sc.nextDouble();
         Circulo perimetro = new Circulo(radio,resul);
-        System.out.println("El resultado del Perimetro es: "+perimetro.getResultado());
+        perimetro.Circulo_Perimetro(radio,resul);
+        System.out.println("El resultado del Perimetro es: "+ df.format(perimetro.getPerimetro()));
+    }
+
+    static public void Diagonal_Circulo(){
+        double resultado = 0;
+        System.out.print("Ingrese el la Longitud de Circulo: ");
+        double ra = sc.nextDouble();
+       Circulo diagonal = new Circulo(ra,resultado);
+       diagonal.Circulo_Diametro(ra,resultado);
+        System.out.println("El resultado de la Diagonal es: "+df.format(diagonal.getDiametro()));
     }
 
 
