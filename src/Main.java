@@ -1,4 +1,7 @@
 import Geometria_1.Circulo;
+import Geometria_1.Cuadrado;
+import Geometria_1.Rectangulo;
+
 import java.lang.Math.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -25,12 +28,17 @@ public class Main {
 
                 switch (op) {
                     case 1:
-                        Perimetro_Circulo();
-                        Area_Circulo();
-                        Diagonal_Circulo();
+                        //Perimetro_Circulo();
+                        //Area_Circulo();
+                        //Diagonal_Circulo();
                         break;
                     case 2:
-
+                        //Area_Cuadrado();
+                        //Cuadrado_Peri();
+                        //Cuadrado_Diagonal();
+                        //Rectan_Area();
+                        //Rectan_Peri();
+                        Rectan_Diago();
                         break;
                     case 3:
 
@@ -56,7 +64,6 @@ public class Main {
         double rad = sc.nextDouble();
         Circulo area = new Circulo(rad, result);
         System.out.println("El resultado del Area del Circulo es: " + df.format(area.getResultado()));
-        System.out.println("");
     }
 
     static public void Perimetro_Circulo() {
@@ -75,6 +82,64 @@ public class Main {
        Circulo diagonal = new Circulo(ra,resultado);
        diagonal.Circulo_Diametro(ra,resultado);
         System.out.println("El resultado de la Diagonal es: "+df.format(diagonal.getDiametro()));
+    }
+
+    static public void Area_Cuadrado(){
+        double result = 0;
+        System.out.print("Ingrese el Lado del Cuadrado: ");
+        double lad = sc.nextDouble();
+        Cuadrado area = new Cuadrado(lad,result);
+        System.out.println("El resultado del Area del Cuadrado es: "+df.format(area.getResul_area()));
+    }
+
+    static public void Cuadrado_Peri(){
+        double res = 0;
+        System.out.print("Ingrese el Lado del Cuadrado: ");
+        double lado = sc.nextDouble();
+        Cuadrado perimetro = new Cuadrado(lado,res);
+        perimetro.Cuadrado_Peri(lado,res);
+        System.out.println("El resultado del Perimetro es: "+ df.format(perimetro.getResult_peri()));
+    }
+
+    static  public  void Cuadrado_Diagonal(){
+        double result = 0;
+        System.out.print("Ingrese el Lado de la Diagonal: ");
+        double la = sc.nextDouble();
+        Cuadrado diagonal = new Cuadrado(la,result);
+        diagonal.Cuadrado_Diago(la,result);
+        System.out.println("El resultado de la Diagonal es: "+df.format(diagonal.getResult_diago()));
+    }
+
+    static public void Rectan_Area(){
+        double resu = 0;
+        System.out.print("Ingrese la Base del Rectangulo: ");
+        double base = sc.nextDouble();
+        System.out.print("Ingrese la Altura del Rectangulo: ");
+        double altura = sc.nextDouble();
+        Rectangulo area = new Rectangulo(base,altura,resu);
+        System.out.println("El resultado del Area del Rectangulo es: "+df.format(area.getArea()));
+    }
+
+    static public void Rectan_Peri(){
+        double result = 0 ;
+        System.out.print("Ingrese la Altura del Rectangulo: ");
+        double altu = sc.nextDouble();
+        System.out.println("Ingrese la Base del Rectangulo: ");
+        double base = sc.nextDouble();
+        Rectangulo perimetro = new Rectangulo(altu,base,result);
+        perimetro.Rectangulo_Perimetro(altu,base,result);
+        System.out.println("El resultado del Perimetro es: "+df.format(perimetro.getPerim()));
+
+    }
+    static public void Rectan_Diago(){
+        double resul_D = 0;
+        System.out.print("Ingrese la Base del Rectangulo: ");
+        double bas = sc.nextDouble();
+        System.out.print("Ingrese la Altura del Rectangulo: ");
+        double al = sc.nextDouble();
+        Rectangulo diagonal = new Rectangulo(bas,al,resul_D);
+        diagonal.Rectangulo_Diagonal(bas,al,resul_D);
+        System.out.println("El resultado del Perimetro es: "+ df.format(diagonal.getDiago()));
     }
 
 
