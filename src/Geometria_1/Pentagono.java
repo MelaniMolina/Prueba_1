@@ -35,9 +35,18 @@ public class Pentagono {
     }
 
     public  void  Pentagono_Apotema(double altura,double lado,double Apotema_Penta){
+<<<<<<< HEAD
         this.altura = altura;
         this.lado = lado;
         this.Apotema_Penta = sqrt(pow(altura,2)-(pow(lado,2)/2));
     }
 
+=======
+     this.altura = altura;
+     this.lado = lado;
+     this.Apotema_Penta = sqrt(pow(altura,2)-(pow(lado,2)/2));
+    }
+
+
+>>>>>>> origin/master
 }

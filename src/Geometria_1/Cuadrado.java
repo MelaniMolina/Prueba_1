@@ -1,10 +1,17 @@
 package Geometria_1;
 import static java.lang.Math.*;
 public class Cuadrado {
+<<<<<<< HEAD
     private double lado;
     double resul_area;
     double result_peri;
     double result_diago;
+=======
+      private double lado;
+     double resul_area;
+     double result_peri;
+     double result_diago;
+>>>>>>> origin/master
 
     public double getResul_area() {
         return resul_area;
@@ -30,4 +37,10 @@ public class Cuadrado {
         this.lado=lado;
         this.result_diago = (lado*sqrt(2));
     }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/master
 }

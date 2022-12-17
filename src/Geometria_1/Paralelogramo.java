@@ -27,9 +27,15 @@ public class Paralelogramo {
         this.areParale = base*altura;
     }
     public  void Paralelogramo_Perime(double lado,double base , double periParale ){
+<<<<<<< HEAD
         this.lado = lado;
         this.base= base;
         this.periParale = (2*(lado*base));
+=======
+       this.lado = lado;
+       this.base= base;
+       this.periParale = (2*(lado*base));
+>>>>>>> origin/master
     }
     public void Paralelogramo_Diagonal(double lado,double base,double angulo, double diagonParale ){
         this.lado = lado;

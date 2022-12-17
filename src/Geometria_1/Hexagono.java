@@ -1,6 +1,9 @@
 package Geometria_1;
 import static java.lang.Math.*;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 public class Hexagono {
     private double perimetro;
     private double apotema;
