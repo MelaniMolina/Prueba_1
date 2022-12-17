@@ -26,7 +26,6 @@ public class Triangulo_Rectan {
         this.areTriAn =((opuesto * adyacente)/2);
     }
     public void Triangulo_RectanPerimetro(double opuesto,double adyacente,double hipotenusa,double perimetroTriAn){
-<<<<<<< HEAD
         this.opuesto = opuesto;
         this.adyacente = adyacente;
         this.hipotenusa = hipotenusa;
@@ -41,22 +40,6 @@ public class Triangulo_Rectan {
         this.AnguloTriAn = result ;
 
     }
-=======
-     this.opuesto = opuesto;
-     this.adyacente = adyacente;
-     this.hipotenusa = hipotenusa;
-     this.perimetroTriAn = (opuesto+adyacente+hipotenusa);
-    }
-
-    public void Triangulo_RectanAngulo(double opuesto,double hipotenusa,double AnguloTriAn ){
-    this.opuesto = opuesto;
-    this.hipotenusa = hipotenusa;
-    double op =Math.asin(opuesto/hipotenusa);
-    double result= (op*180)/3.141592654;
-    this.AnguloTriAn = result ;
-
-    }
 
 
->>>>>>> origin/master
 }

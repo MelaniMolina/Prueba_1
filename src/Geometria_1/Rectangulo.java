@@ -1,19 +1,11 @@
 package Geometria_1;
 import static java.lang.Math.*;
 public class Rectangulo {
-<<<<<<< HEAD
     private double base;
     private double altura;
     double area;
     double perim;
     double diago;
-=======
-      private double base;
-      private double altura;
-      double area;
-      double perim;
-      double diago;
->>>>>>> origin/master
 
     public double getArea() {
         return area;

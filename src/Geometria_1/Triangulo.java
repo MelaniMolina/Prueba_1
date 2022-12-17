@@ -27,20 +27,11 @@ public class Triangulo {
         this.area_Trian = ((base *altura)/2);
     }
     public void  Triangulo_Per(double lado,double perimetro_Trian){
-<<<<<<< HEAD
         this.lado = lado;
         this.perimetro_Trian = (3*lado);
     }
     public  void Triangulo_Altura(double lado ,double altura_Trian){
         this.lado = lado;
         this.altura_Trian = ((sqrt(3)*lado)/2);
-=======
-       this.lado = lado;
-       this.perimetro_Trian = (3*lado);
-    }
-    public  void Triangulo_Altura(double lado ,double altura_Trian){
-          this.lado = lado;
-          this.altura_Trian = ((sqrt(3)*lado)/2);
->>>>>>> origin/master
     }
 }

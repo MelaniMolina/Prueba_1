@@ -1,7 +1,6 @@
 package Geometria_1;
 import static java.lang.Math.*;
 public class Trapecio {
-<<<<<<< HEAD
     private double baseMayor;
     private double baseMenor;
     private double altura;
@@ -13,19 +12,6 @@ public class Trapecio {
     double areaTrapecio;
     double perimetroTrapecio;
     double alturaTrapecio;
-=======
- private double baseMayor;
- private double baseMenor;
- private double altura;
- private double ladouno;
-
- private double ladodos;
-
- private double area;
- double areaTrapecio;
- double perimetroTrapecio;
- double alturaTrapecio;
->>>>>>> origin/master
 
     public double getAreaTrapecio() {
         return areaTrapecio;
@@ -59,8 +45,5 @@ public class Trapecio {
         this.baseMenor = baseMenor;
         this.alturaTrapecio =((2*area)/(baseMayor+baseMenor));
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
