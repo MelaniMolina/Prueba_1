@@ -753,19 +753,75 @@ public class Main {
                                             } while (lado < 0);
                                             Cubo cubo = new Cubo(lado, resultado);
                                             cubo.cuboArea(lado, resultado);
-                                            System.out.println("\nEl resultadoqa de la Diagonal es: " + df.format(cubo.getResultado()));
+                                            System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
 
                                             break;
                                         case 2:
+                                            double altura=0, result =0, radio=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                radio = sc.nextDouble();
+                                                if (radio < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radio < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                altura = sc.nextDouble();
+                                                if (altura < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (altura < 0);
+                                            Cilindro cilindro = new Cilindro(altura,radio, result);
+                                            cilindro.cilArea(altura,radio, result);
+                                            System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResult()));
+
 
                                             break;
                                         case 3:
+                                            double lado1=0, resultad=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado1 = sc.nextDouble();
+                                                if (lado1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado1 < 0);
+                                            TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
+                                            tetraedro.alturaTetraedro(lado1,resultad);
+                                            System.out.println("\nEl resultado de la altura es: " + df.format(tetraedro.getResultado()));
 
                                             break;
                                         case 4:
+                                            double rad=0, resu=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                rad = sc.nextDouble();
+                                                if (rad < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (rad < 0);
+                                            Esfera esfera=new Esfera(rad,resu);
+                                            esfera.areaEsfera(rad,resu);
+                                            System.out.println("\nEl resultado del  es: " + df.format(esfera.getResul()));
+
+
 
                                             break;
                                         case 5:
+
+                                            double olado=0, oresultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                olado = sc.nextDouble();
+                                                if (olado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (olado < 0);
+                                            Octaedro octaedro=new Octaedro(olado, oresultado);
+                                            octaedro.alturaOctaedro(olado,olado);
+                                            System.out.println("\nEl resultado de la altura es: " + df.format(octaedro.getResultado()));
+
 
                                             break;
                                         case 6:
@@ -793,8 +849,8 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU PERIMETROS /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1)                  |");
-                                    System.out.println("|\t2)                 |");
+                                    System.out.println("|\t1) Cubo                     |");
+                                    System.out.println("|\t2) Cilindro                 |");
                                     System.out.println("|\t3)               |");
                                     System.out.println("|\t4)                     |");
                                     System.out.println("|\t5)                |");
@@ -814,18 +870,80 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-
+                                            double lado=0, resultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado = sc.nextDouble();
+                                                if (lado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado < 0);
+                                            Cubo cubo = new Cubo(lado, resultado);
+                                            cubo.cuboPerimetro(lado, resultado);
+                                            System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
                                             break;
                                         case 2:
-
+                                            double altura=0, result =0, radio=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                radio = sc.nextDouble();
+                                                if (radio < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radio < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                altura = sc.nextDouble();
+                                                if (altura < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (altura < 0);
+                                            Cilindro cilindro = new Cilindro(altura,radio, result);
+                                            cilindro.cilArea(altura,radio, result);
+                                            System.out.println("\nEl resultado del perimetro es: " + df.format(cilindro.getResult()));
                                             break;
                                         case 3:
+                                            double lado1=0, resultad=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado1 = sc.nextDouble();
+                                                if (lado1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado1 < 0);
+                                            TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
+                                            tetraedro.areaTetraedro(lado1,resultad);
+                                            System.out.println("\nEl resultado del area es: " + df.format(tetraedro.getResultado()));
 
                                             break;
                                         case 4:
+                                            double rad=0, resu=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                rad = sc.nextDouble();
+                                                if (rad < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (rad < 0);
+                                            Esfera esfera=new Esfera(rad,resu);
+                                            esfera.perimetroEsfera(rad,resu);
+                                            System.out.println("\nEl resultado del  es: " + df.format(esfera.getResul()));
 
                                             break;
                                         case 5:
+                                            double olado=0, oresultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                olado = sc.nextDouble();
+                                                if (olado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (olado < 0);
+                                            Octaedro octaedro=new Octaedro(olado, oresultado);
+                                            octaedro.areaOctaedro(olado,olado);
+                                            System.out.println("\nEl resultado de la area es: " + df.format(octaedro.getResultado()));
+
+
 
                                             break;
                                         case 6:
@@ -853,8 +971,8 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU VOLUMENES /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1)                   |");
-                                    System.out.println("|\t2)                  |");
+                                    System.out.println("|\t1) Cubo                     |");
+                                    System.out.println("|\t2) Cilindro                 |");
                                     System.out.println("|\t3)                |");
                                     System.out.println("|\t4)                     |");
                                     System.out.println("|\t5)                |");
@@ -874,18 +992,83 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
+                                            double lado=0, resultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado = sc.nextDouble();
+                                                if (lado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado < 0);
+                                            Cubo cubo = new Cubo(lado, resultado);
+                                            cubo.cuboVolumen(lado, resultado);
+                                            System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
 
                                             break;
                                         case 2:
 
-                                            break;
-                                        case 3:
+                                            double altura=0, result =0, radio=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                radio = sc.nextDouble();
+                                                if (radio < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radio < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                altura = sc.nextDouble();
+                                                if (altura < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (altura < 0);
+                                            Cilindro cilindro = new Cilindro(altura,radio, result);
+                                            cilindro.cilVolumen(altura,radio, result);
+                                            System.out.println("\nEl resultado del volumrn es: " + df.format(cilindro.getResult()));
 
                                             break;
+                                        case 3:
+                                            double lado1=0, resultad=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado1 = sc.nextDouble();
+                                                if (lado1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado1 < 0);
+                                            TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
+                                            tetraedro.volumwnTetraedro(lado1,resultad);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(tetraedro.getResultado()));
+                                            break;
                                         case 4:
+                                            double rad=0, resu=0;
+                                            do {
+                                                System.out.print("\nIngrese el radio: ");
+                                                rad = sc.nextDouble();
+                                                if (rad < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (rad < 0);
+                                            Esfera esfera=new Esfera(rad,resu);
+                                            esfera.volumenEsfera(rad,resu);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(esfera.getResul()));
+
 
                                             break;
                                         case 5:
+                                            double olado=0, oresultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                olado = sc.nextDouble();
+                                                if (olado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (olado < 0);
+                                            Octaedro octaedro=new Octaedro(olado, oresultado);
+                                            octaedro.volumwnOctaedro(olado,olado);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(octaedro.getResultado()));
+
+
 
                                             break;
                                         case 6:

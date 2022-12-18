@@ -29,4 +29,14 @@ public class Cubo {
         this.resultado=(Math.pow(vlado, 2)) * 6;
 
     }
+    public void cuboPerimetro(double vlado, double resultado)
+    { this.vlado=vlado;
+        this.resultado=vlado*12;
+
+    }
+    public void cuboVolumen(double vlado, double resultado)
+    { this.vlado=vlado;
+        this.resultado=Math.pow(vlado, 3);
+
+    }
 }
