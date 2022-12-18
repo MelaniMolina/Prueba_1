@@ -722,16 +722,16 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU AREAS /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1)                   |");
-                                    System.out.println("|\t2)                  |");
-                                    System.out.println("|\t3)                |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                 |");
-                                    System.out.println("|\t8)            |");
-                                    System.out.println("|\t9)                 |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t1) Cubo                     |");
+                                    System.out.println("|\t2) Cilindro                 |");
+                                    System.out.println("|\t3) Tetraedro                |");
+                                    System.out.println("|\t4) Esfera                   |");
+                                    System.out.println("|\t5) Octaedro                 |");
+                                    System.out.println("|\t6) Piramide Regular         |");
+                                    System.out.println("|\t7) Cono                     |");
+                                    System.out.println("|\t8) Tronco Cono              |");
+                                    System.out.println("|\t9) Tronco Piramide          |");
+                                    System.out.println("|\t10) Prisma                  |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -876,9 +876,55 @@ public class Main {
 
                                             break;
                                         case 8:
-
+                                            double G,g,altura14,resultado15=0, radioos=0;
+                                            do{
+                                                System.out.print("\nIngrese el radio uno: ");
+                                                G=sc.nextDouble();
+                                                if (G <0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (G <0);
+                                            do{
+                                                System.out.print("Ingrese el radio dos: ");
+                                                g=sc.nextDouble();
+                                                if (g<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (g <0);
+                                            do{
+                                                System.out.print("Ingrese la altura: ");
+                                                altura14=sc.nextDouble();
+                                                if (altura14<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (altura14 <0);
+                                            Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
+                                            co.Tronco_cono_Lateral(G,g,altura14,radioos);
+                                            System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
                                             break;
                                         case 9:
+                                            double G1,g1,altura15,resultado16=0, radioos1=0;
+                                            do{
+                                                System.out.print("\nIngrese la base mayor: ");
+                                                G1=sc.nextDouble();
+                                                if (G1 <0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (G1 <0);
+                                            do{
+                                                System.out.print("Ingrese base menor: ");
+                                                g1=sc.nextDouble();
+                                                if (g1<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (g1 <0);
+                                            do{
+                                                System.out.print("Ingrese lado uno: ");
+                                                altura15=sc.nextDouble();
+                                                if (altura15<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (altura15 <0);
 
                                             break;
                                         case 10:
@@ -896,14 +942,14 @@ public class Main {
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     System.out.println("|\t1) Cubo                     |");
                                     System.out.println("|\t2) Cilindro                 |");
-                                    System.out.println("|\t3)               |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                  |");
-                                    System.out.println("|\t8)             |");
-                                    System.out.println("|\t9)                  |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t3) Tetraedro                |");
+                                    System.out.println("|\t4) Esfera                   |");
+                                    System.out.println("|\t5) Octaedro                 |");
+                                    System.out.println("|\t6) Piramide Regular         |");
+                                    System.out.println("|\t7) Cono                     |");
+                                    System.out.println("|\t8) Tronco Cono              |");
+                                    System.out.println("|\t9) Tronco Piramide          |");
+                                    System.out.println("|\t10) Prisma                  |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -1043,7 +1089,31 @@ public class Main {
 
                                             break;
                                         case 8:
-
+                                            double G,g,altura14,resultado15=0, radioos=0;
+                                            do{
+                                                System.out.print("\nIngrese el radio uno: ");
+                                                G=sc.nextDouble();
+                                                if (G <0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (G <0);
+                                            do{
+                                                System.out.print("Ingrese el radio dos: ");
+                                                g=sc.nextDouble();
+                                                if (g<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (g <0);
+                                            do{
+                                                System.out.print("Ingrese la altura: ");
+                                                altura14=sc.nextDouble();
+                                                if (altura14<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (altura14 <0);
+                                            Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
+                                            co.Tronco_cono_Lateral(G,g,altura14,radioos);
+                                            System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
                                             break;
                                         case 9:
 
@@ -1063,13 +1133,13 @@ public class Main {
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     System.out.println("|\t1) Cubo                     |");
                                     System.out.println("|\t2) Cilindro                 |");
-                                    System.out.println("|\t3)                |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                  |");
-                                    System.out.println("|\t8)             |");
-                                    System.out.println("|\t9)                  |");
+                                    System.out.println("|\t3) Tetraedro                |");
+                                    System.out.println("|\t4) Esfera                   |");
+                                    System.out.println("|\t5) Octaedro                 |");
+                                    System.out.println("|\t6) Piramide Regular         |");
+                                    System.out.println("|\t7) Cono                     |");
+                                    System.out.println("|\t8) Tronco Cono              |");
+                                    System.out.println("|\t9)                 |");
                                     System.out.println("|\t10)     |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
@@ -1214,7 +1284,31 @@ public class Main {
 
                                             break;
                                         case 8:
-
+                                            double G,g,altura12,resultado13=0;
+                                            do{
+                                                System.out.print("\nIngrese el radio uno: ");
+                                                G=sc.nextDouble();
+                                                if (G <0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (G <0);
+                                            do{
+                                                System.out.print("Ingrese el radio dos: ");
+                                                g=sc.nextDouble();
+                                                if (g<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (g <0);
+                                            do{
+                                                System.out.print("Ingrese la altura: ");
+                                                altura12=sc.nextDouble();
+                                                if (altura12<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (altura12 <0);
+                                            Tronco_cono c = new Tronco_cono(G,g,altura12,resultado13);
+                                            c.Tronco_cono_Volumen(G,g,altura12);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(c.getVolumen_TC()));
                                             break;
                                         case 9:
 
