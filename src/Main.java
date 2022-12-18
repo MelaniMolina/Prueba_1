@@ -751,9 +751,9 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo diagonal = new Circulo(lado, resultado);
-                                            diagonal.Circulo_Diametro(lado, resultado);
-                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(diagonal.getResultado()));
+                                            Cubo cubo = new Cubo(lado, resultado);
+                                            cubo.cuboArea(lado, resultado);
+                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(cubo.getResultado()));
 
                                             break;
                                         case 2:
