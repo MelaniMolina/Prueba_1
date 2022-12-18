@@ -1,17 +1,9 @@
 
 import Geometria3D.Cubo;
-import Geometria_1.Circulo;
-import Geometria_1.Cuadrado;
-import Geometria_1.Rectangulo;
-import Geometria_1.Rombo;
-import Geometria_1.Triangulo_Rectan;
-import Geometria_1.Paralelogramo;
-import Geometria_1.Trapecio;
-import  Geometria_1.Pentagono;
-import  Geometria_1.Triangulo;
-import Geometria_1.Hexagono;
+
 import java.lang.Math.*;
 import Geometria3D.*;
+import Geometria2D.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -722,16 +714,16 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU AREAS /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1)                   |");
-                                    System.out.println("|\t2)                  |");
-                                    System.out.println("|\t3)                |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                 |");
-                                    System.out.println("|\t8)            |");
-                                    System.out.println("|\t9)                 |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t1) Cubo                                    |");
+                                    System.out.println("|\t2) Cilindro                                |");
+                                    System.out.println("|\t3) Tetraedro regular  altura               |");
+                                    System.out.println("|\t4) Esfera                                  |");
+                                    System.out.println("|\t5) Octaedro  altura                        |");
+                                    System.out.println("|\t6) Prisma Regular altura                   |");
+                                    System.out.println("|\t7) Cono altura                             |");
+                                    System.out.println("|\t8) Piramide Pentaonal altura y apotemas    |");
+                                    System.out.println("|\t9) Piramide Pentagonal altura y apotemas   |");
+                                    System.out.println("|\t10)Piramide Hexagonal altura y apotemas    |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -876,12 +868,77 @@ public class Main {
 
                                             break;
                                         case 8:
+                                            double ladoBa=0, ladoL=0, apotemaB=0, apotemaL=0, alturaT=0 ,resultadoT=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBa = sc.nextDouble();
+                                                if (ladoBa < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBa < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoL = sc.nextDouble();
+                                                if (ladoL < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoL < 0);
 
-                                            break;
+                                            PiramidePentagonal piramidePentagonal= new PiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            piramidePentagonal.ayhPiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            System.out.println("\nEl resultado del apotema de base es: " + df.format(piramidePentagonal.getApotemaB()));
+                                            System.out.println("\nEl resultado del apotema lateral es: " + df.format(piramidePentagonal.getApotemaL()));
+                                            System.out.println("\nEl resultado del altura es: " + df.format(piramidePentagonal.getAltura()));
+
+
                                         case 9:
+                                            double ladoBao=0, ladoLo=0, apotemaBo=0, apotemaLo=0, alturaTo=0 ,resultadoTo=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBao = sc.nextDouble();
+                                                if (ladoBao < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBao < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLo = sc.nextDouble();
+                                                if (ladoLo < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLo < 0);
+
+                                            PiramideOctagonal piramideOctagonal= new PiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            piramideOctagonal.ayhPiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            System.out.println("\nEl resultado del apotema de base es: " + df.format(piramideOctagonal.getApotemaB()));
+                                            System.out.println("\nEl resultado del apotema lateral es: " + df.format(piramideOctagonal.getApotemaL()));
+                                            System.out.println("\nEl resultado del altura es: " + df.format(piramideOctagonal.getAltura()));
+
 
                                             break;
                                         case 10:
+                                            double ladoBah=0, ladoLh=0, apotemaBh=0, apotemaLh=0, alturaTh=0 ,resultadoTh=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBah = sc.nextDouble();
+                                                if (ladoBah < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBah < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLh = sc.nextDouble();
+                                                if (ladoLh < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLh < 0);
+
+                                            PiramideHexagonal piramideHexagonal= new PiramideHexagonal(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            piramideHexagonal.ayhPiramideHexagonañ(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            System.out.println("\nEl resultado del apotema de base es: " + df.format(piramideHexagonal.getApotemaB()));
+                                            System.out.println("\nEl resultado del apotema lateral es: " + df.format(piramideHexagonal.getApotemaL()));
+                                            System.out.println("\nEl resultado del altura es: " + df.format(piramideHexagonal.getAltura()));
+
 
                                             break;
                                     }
@@ -894,16 +951,16 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU PERIMETROS /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1) Cubo                     |");
-                                    System.out.println("|\t2) Cilindro                 |");
-                                    System.out.println("|\t3)               |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                  |");
-                                    System.out.println("|\t8)             |");
-                                    System.out.println("|\t9)                  |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t1) Cubo                      |");
+                                    System.out.println("|\t2) Cilindro                  |");
+                                    System.out.println("|\t3) Tetraedro regular  area   |");
+                                    System.out.println("|\t4) Esfera                    |");
+                                    System.out.println("|\t5) Octaedro  area            |");
+                                    System.out.println("|\t6) Prisma Regular area       |");
+                                    System.out.println("|\t7) Cono altura               |");
+                                    System.out.println("|\t8) Piramide Pentaonal area   |");
+                                    System.out.println("|\t9) Piramide Pentagonal area  |");
+                                    System.out.println("|\t10)Piramide Hexagonal area   |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -1043,12 +1100,70 @@ public class Main {
 
                                             break;
                                         case 8:
+                                            double ladoBa=0, ladoL=0, apotemaB=0, apotemaL=0, alturaT=0 ,resultadoT=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBa = sc.nextDouble();
+                                                if (ladoBa < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBa < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoL = sc.nextDouble();
+                                                if (ladoL < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoL < 0);
 
-                                            break;
+                                            PiramidePentagonal piramidePentagonal= new PiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            piramidePentagonal.areaPiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            System.out.println("\nEl resultado del area es: " + df.format(piramidePentagonal.getApotemaB()));
+
                                         case 9:
+                                            double ladoBao=0, ladoLo=0, apotemaBo=0, apotemaLo=0, alturaTo=0 ,resultadoTo=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBao = sc.nextDouble();
+                                                if (ladoBao < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBao < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLo = sc.nextDouble();
+                                                if (ladoLo < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLo < 0);
+
+                                            PiramideOctagonal piramideOctagonal= new PiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            piramideOctagonal.areaPiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            System.out.println("\nEl resultado del area es: " + df.format(piramideOctagonal.getApotemaB()));
+
 
                                             break;
                                         case 10:
+                                            double ladoBah=0, ladoLh=0, apotemaBh=0, apotemaLh=0, alturaTh=0 ,resultadoTh=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBah = sc.nextDouble();
+                                                if (ladoBah < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBah < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLh = sc.nextDouble();
+                                                if (ladoLh < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLh < 0);
+
+                                            PiramideHexagonal piramideHexagonal= new PiramideHexagonal(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            piramideHexagonal.areaPiramideHexagonal(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            System.out.println("\nEl resultado del area es: " + df.format(piramideHexagonal.getApotemaB()));
+
 
                                             break;
                                     }
@@ -1061,16 +1176,16 @@ public class Main {
                                     System.out.print("\t-/-/-/-/-/ SUBMENU VOLUMENES /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
-                                    System.out.println("|\t1) Cubo                     |");
-                                    System.out.println("|\t2) Cilindro                 |");
-                                    System.out.println("|\t3)                |");
-                                    System.out.println("|\t4)                     |");
-                                    System.out.println("|\t5)                |");
-                                    System.out.println("|\t6)                 |");
-                                    System.out.println("|\t7)                  |");
-                                    System.out.println("|\t8)             |");
-                                    System.out.println("|\t9)                  |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t1) Cubo                 |");
+                                    System.out.println("|\t2) Cilindro             |");
+                                    System.out.println("|\t3) Tetraedro regular    |");
+                                    System.out.println("|\t4) Esfera               |");
+                                    System.out.println("|\t5) Octaedro  altura     |");
+                                    System.out.println("|\t6) Prisma Regular       |");
+                                    System.out.println("|\t7) Cono altura          |");
+                                    System.out.println("|\t8) Piramide Pentaonal   |");
+                                    System.out.println("|\t9) Piramide Pentagonal  |");
+                                    System.out.println("|\t10)Piramide Hexagonal   |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -1214,12 +1329,71 @@ public class Main {
 
                                             break;
                                         case 8:
+                                            double ladoBa=0, ladoL=0, apotemaB=0, apotemaL=0, alturaT=0 ,resultadoT=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBa = sc.nextDouble();
+                                                if (ladoBa < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBa < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoL = sc.nextDouble();
+                                                if (ladoL < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoL < 0);
 
-                                            break;
+                                            PiramidePentagonal piramidePentagonal= new PiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            piramidePentagonal.volumenPiramidePentagonal(ladoL,ladoBa,apotemaB,apotemaL,alturaT,resultadoT);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(piramidePentagonal.getApotemaB()));
+
+
                                         case 9:
+                                            double ladoBao=0, ladoLo=0, apotemaBo=0, apotemaLo=0, alturaTo=0 ,resultadoTo=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBao = sc.nextDouble();
+                                                if (ladoBao < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBao < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLo = sc.nextDouble();
+                                                if (ladoLo < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLo < 0);
+
+                                            PiramideOctagonal piramideOctagonal= new PiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            piramideOctagonal.volumenPiramideOctagonal(ladoLo,ladoBao,apotemaBo,apotemaLo,alturaTo,resultadoTo);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(piramideOctagonal.getApotemaB()));
+
 
                                             break;
                                         case 10:
+                                            double ladoBah=0, ladoLh=0, apotemaBh=0, apotemaLh=0, alturaTh=0 ,resultadoTh=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del base: ");
+                                                ladoBah = sc.nextDouble();
+                                                if (ladoBah < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoBah < 0);
+                                            do {
+                                                System.out.print("\nIngrese el lado lateral: ");
+                                                ladoLh = sc.nextDouble();
+                                                if (ladoLh < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoLh < 0);
+
+                                            PiramideHexagonal piramideHexagonal= new PiramideHexagonal(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            piramideHexagonal.volumenPiramideHexagonal(ladoLh,ladoBah,apotemaBh,apotemaLh,alturaTh,resultadoTh);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(piramideHexagonal.getApotemaB()));
+
 
                                             break;
                                     }
