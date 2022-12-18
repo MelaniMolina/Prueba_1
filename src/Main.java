@@ -825,9 +825,54 @@ public class Main {
 
                                             break;
                                         case 6:
+                                            double alturaP=0, ladoA, ladoB ,resultaP =0;
+                                            do {
+                                                System.out.print("\nIngrese la altura A: ");
+                                                ladoA = sc.nextDouble();
+                                                if (ladoA < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoA < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura B: ");
+                                                ladoB = sc.nextDouble();
+                                                if (ladoB < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoB < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                alturaP = sc.nextDouble();
+                                                if (alturaP < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (alturaP < 0);
+                                            PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
+                                            prismaRegular.areaPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            System.out.println("\nEl resultado del area es: " + df.format(prismaRegular.getResultado()));
+
 
                                             break;
                                         case 7:
+                                            double ladoG=0, radioC=0, alturaC=0 ,resultadoC=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del cono: ");
+                                                ladoG = sc.nextDouble();
+                                                if (ladoG < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoG < 0);
+                                            do {
+                                                System.out.print("\nIngrese el radio : ");
+                                                radioC = sc.nextDouble();
+                                                if (radioC < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radioC < 0);
+
+                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
+                                            cono.alturaCono(ladoG,radioC,alturaC,resultadoC);
+                                            System.out.println("\nEl resultado de la altura es: " + df.format(cono.getResultado()));
 
                                             break;
                                         case 8:
@@ -947,9 +992,54 @@ public class Main {
 
                                             break;
                                         case 6:
+                                            double alturaP=0, ladoA, ladoB ,resultaP =0;
+                                            do {
+                                                System.out.print("\nIngrese la altura A: ");
+                                                ladoA = sc.nextDouble();
+                                                if (ladoA < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoA < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura B: ");
+                                                ladoB = sc.nextDouble();
+                                                if (ladoB < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoB < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                alturaP = sc.nextDouble();
+                                                if (alturaP < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (alturaP < 0);
+                                            PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
+                                            prismaRegular.perimetroPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            System.out.println("\nEl resultado del perimetro es: " + df.format(prismaRegular.getResultado()));
+
 
                                             break;
                                         case 7:
+                                            double ladoG=0, radioC=0, alturaC=0 ,resultadoC=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del cono: ");
+                                                ladoG = sc.nextDouble();
+                                                if (ladoG < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoG < 0);
+                                            do {
+                                                System.out.print("\nIngrese el radio : ");
+                                                radioC = sc.nextDouble();
+                                                if (radioC < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radioC < 0);
+
+                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
+                                            cono.areaCono(ladoG,radioC,alturaC,resultadoC);
+                                            System.out.println("\nEl resultado del area es: " + df.format(cono.getResultado()));
 
                                             break;
                                         case 8:
@@ -1072,9 +1162,54 @@ public class Main {
 
                                             break;
                                         case 6:
+                                            double alturaP=0, ladoA, ladoB ,resultaP =0;
+                                            do {
+                                                System.out.print("\nIngrese la altura A: ");
+                                                ladoA = sc.nextDouble();
+                                                if (ladoA < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoA < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura B: ");
+                                                ladoB = sc.nextDouble();
+                                                if (ladoB < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoB < 0);
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                alturaP = sc.nextDouble();
+                                                if (alturaP < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (alturaP < 0);
+                                            PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
+                                            prismaRegular.volumenPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            System.out.println("\nEl resultado del volumrn es: " + df.format(prismaRegular.getResultado()));
+
 
                                             break;
                                         case 7:
+                                            double ladoG=0, radioC=0, alturaC=0 ,resultadoC=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado del cono: ");
+                                                ladoG = sc.nextDouble();
+                                                if (ladoG < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (ladoG < 0);
+                                            do {
+                                                System.out.print("\nIngrese el radio : ");
+                                                radioC = sc.nextDouble();
+                                                if (radioC < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (radioC < 0);
+
+                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
+                                            cono.volumenCono(ladoG,radioC,alturaC,resultadoC);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(cono.getResultado()));
 
                                             break;
                                         case 8:
