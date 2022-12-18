@@ -925,7 +925,9 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             }while (altura15 <0);
-
+                                            Tronco_Piramide tr = new Tronco_Piramide(G1,g1,altura15,resultado16,radioos1);
+                                            tr.Tronco_Piramide_Laterak(G1,g1,altura15);
+                                            System.out.println("\nEl resultado del area lateral es: " + df.format(tr.getArea_lateral()));
                                             break;
                                         case 10:
 
