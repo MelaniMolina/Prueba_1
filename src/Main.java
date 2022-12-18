@@ -766,7 +766,7 @@ public class Main {
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
                                             cilindro.cilArea(altura,radio, result);
-                                            System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResult()));
+                                            System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResultado()));
 
 
                                             break;
@@ -1002,7 +1002,7 @@ public class Main {
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
                                             cilindro.cilArea(altura,radio, result);
-                                            System.out.println("\nEl resultado del perimetro es: " + df.format(cilindro.getResult()));
+                                            System.out.println("\nEl resultado del perimetro es: " + df.format(cilindro.getResultado()));
                                             break;
                                         case 3:
                                             double lado1=0, resultad=0;
@@ -1229,7 +1229,7 @@ public class Main {
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
                                             cilindro.cilVolumen(altura,radio, result);
-                                            System.out.println("\nEl resultado del volumrn es: " + df.format(cilindro.getResult()));
+                                            System.out.println("\nEl resultado del volumrn es: " + df.format(cilindro.getResultado()));
 
                                             break;
                                         case 3:
