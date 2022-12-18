@@ -1,7 +1,7 @@
 package Geometria3D;
 
 public class Cilindro {
-double altura, radio, result=0;
+private double altura, radio, result=0;
 
     public Cilindro(double altura, double radio, double result) {
         this.altura = altura;
