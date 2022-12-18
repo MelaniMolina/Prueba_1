@@ -753,7 +753,7 @@ public class Main {
                                             } while (lado < 0);
                                             Cubo cubo = new Cubo(lado, resultado);
                                             cubo.cuboArea(lado, resultado);
-                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(cubo.getResultado()));
+                                            System.out.println("\nEl resultadoa de la Diagonal es: " + df.format(cubo.getResultado()));
 
                                             break;
                                         case 2:
