@@ -84,7 +84,7 @@ public class Main {
                                                 }
                                             } while (rad < 0);
                                             Circulo area = new Circulo(rad, result);
-                                            System.out.println("El resultado del Area del Circulo es: " + df.format(area.getResultado()));
+                                            System.out.println("El resultado del Area del Circlo es: " + df.format(area.getResultado()));
                                             System.out.println("");
                                             break;
                                         case 2:
