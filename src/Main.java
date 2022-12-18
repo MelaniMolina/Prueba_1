@@ -1,4 +1,5 @@
 
+import Geometria3D.Cubo;
 import Geometria_1.Circulo;
 import Geometria_1.Cuadrado;
 import Geometria_1.Rectangulo;
@@ -10,6 +11,7 @@ import  Geometria_1.Pentagono;
 import  Geometria_1.Triangulo;
 import Geometria_1.Hexagono;
 import java.lang.Math.*;
+import Geometria3D.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -741,6 +743,17 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
+                                            double lado=0, resultado=0;
+                                            do {
+                                                System.out.print("\nIngrese el lado: ");
+                                                lado = sc.nextDouble();
+                                                if (lado < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            } while (lado < 0);
+                                            Cubo diagonal = new Circulo(lado, resultado);
+                                            diagonal.Circulo_Diametro(lado, resultado);
+                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(diagonal.getResultado()));
 
                                             break;
                                         case 2:
