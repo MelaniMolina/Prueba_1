@@ -2,38 +2,29 @@ package Geometria_1;
 
 import static java.lang.Math.*;
 
-public class Circulo {
+public class Circulo extends Figuras2D {
         private  double radio;
-        double resultado;
 
-        double perimetro;
-
-        double diametro;
-
-    public double getDiametro() {
-        return diametro;
-    }
-
-    public double getResultado() {
-        return resultado;
-    }
-
-    public double getPerimetro() {
-        return perimetro;
-    }
-
-    public Circulo(double radio, double resultado) {
+    public Circulo(double radio) {
         this.radio = radio;
-        this.resultado = (PI * pow(radio,2));
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
+    }
+
+    @Override
+    protected void calculararea() {
+        this.radio = radio;
+        this.area = (PI * pow(radio,2));
         }
-    public void Circulo_Perimetro(double radio, double perimetro) {
+    protected void calcularperimetro() {
         this.radio = radio;
         this.perimetro = (2* PI * radio);
 
     }
-    public void Circulo_Diametro(double radio, double diametro) {
+    protected void calculardiagonales() {
         this.radio = radio;
-        this.diametro = (2*radio);
+        this.diagonales = (2*radio);
     }
 
 

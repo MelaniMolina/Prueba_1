@@ -1,34 +1,27 @@
 package Geometria_1;
 import static java.lang.Math.*;
-public class Cuadrado {
+public class Cuadrado extends Figuras2D {
     private double lado;
-    double resul_area;
-    double result_peri;
-    double result_diago;
 
-    public double getResul_area() {
-        return resul_area;
-    }
-
-    public double getResult_peri() {
-        return result_peri;
-    }
-
-    public double getResult_diago() {
-        return result_diago;
-    }
-
-    public Cuadrado(double lado, double resul_area) {
+    public Cuadrado(double lado) {
         this.lado = lado;
-        this.resul_area = (pow(lado,2));
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
     }
-    public void Cuadrado_Peri(double lado,double result_peri){
-        this.lado=lado;
-        this.result_peri = (4*lado);
+
+    @Override
+    protected void calculararea(){
+        this.lado = lado;
+        this.area = (pow(lado,2));
     }
-    public void Cuadrado_Diago(double lado,double result_diago){
+    protected void calcularperimetro(){
         this.lado=lado;
-        this.result_diago = (lado*sqrt(2));
+        this.perimetro = (4*lado);
+    }
+    protected void calculardiagonales(){
+        this.lado=lado;
+        this.diagonales = (lado*sqrt(2));
     }
 
 
