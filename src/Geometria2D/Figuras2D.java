@@ -1,4 +1,4 @@
-package Geometria_1;
+package Geometria2D;
 
 public abstract class Figuras2D {
 
