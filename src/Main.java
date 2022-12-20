@@ -183,24 +183,22 @@ public class Main {
                                             System.out.println("\nEl resultado del Area del Pentagono es: "+df.format(area4.getAre_Penta()));
                                             break;
                                         case 7:
-                                            double r = 0;
-                                            double apt, per;
                                             do {
                                                 System.out.print("\nIngrese el Perimetro del Hexagono: ");
-                                                per = sc.nextDouble();
-                                                if (per < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (per < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese el Apotema del Hexagono: ");
-                                                apt = sc.nextDouble();
-                                                if ( apt < 0){
+                                                num2 = sc.nextDouble();
+                                                if ( num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (apt < 0);
-                                            Hexagono area1 = new Hexagono(per,apt,r);
-                                            System.out.println("\nEl resultado del Area del Hexagono es: "+df.format(area1.getAreaHexa()));
+                                            }while (num2 < 0);
+                                            Hexagono h = new Hexagono(num1,num2);
+                                            System.out.println("\nEl resultado del Area del Hexagono es: "+df.format(h.getArea()));
                                             break;
                                         case 8:
                                             double resultado6 = 0, bas, alt1;
@@ -382,17 +380,15 @@ public class Main {
                                             System.out.println("\nEl resultado del Perimetro del Pentagono es: "+df.format(perimetro5.getPeri_Penta()));
                                             break;
                                         case 7:
-                                            double re = 0, aux1 = 0, lado2;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Hexagono: ");
-                                                lado2 = sc.nextDouble();
-                                                if (lado2 < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1< 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lado2 < 0);
-                                            Hexagono per = new Hexagono(lado2,re,aux1);
-                                            per.Hexagono_Peri(lado2,re);
-                                            System.out.println("\nEl resultado del Perimetro del Hexagono es: "+df.format(per.getPerimteroHexa()));
+                                            }while (num1 < 0);
+                                            Hexagono h = new Hexagono(num1,num2=0);
+                                            System.out.println("\nEl resultado del Perimetro del Hexagono es: "+df.format(h.getPerimetro()));
                                             break;
                                         case 8:
                                             double resultado8 = 0, lad2, base1;
@@ -580,17 +576,15 @@ public class Main {
                                             System.out.println("\nEl resultado del Apotema del Pentagono es: "+df.format(altura2.getApotema_Penta()));
                                             break;
                                         case 7:
-                                            double r = 0 , aux2 =0, lados2;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Hexagono: ");
-                                                lados2 = sc.nextDouble();
-                                                if (lados2 <  0 ){
+                                                num1 = sc.nextDouble();
+                                                if (num1 <  0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (lados2 < 0 );
-                                            Hexagono apotema = new Hexagono(lados2,r,aux2);
-                                            apotema.Hexagono_Apot(lados2,r);
-                                            System.out.println("\nEl resultado el Apotema del Hexagono es: "+df.format(apotema.getApotemaHexa()));
+                                            }while (num1 < 0 );
+                                            Hexagono h = new Hexagono(num1,num2=0);
+                                            System.out.println("\nEl resultado el Apotema del Hexagono es: "+df.format(h.getDiagonales()));
                                             break;
                                         case 8:
                                             double resultado9 = 0, lad4, base2, angulo;

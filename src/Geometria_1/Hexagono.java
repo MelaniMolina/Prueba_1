@@ -1,39 +1,25 @@
 package Geometria_1;
 import static java.lang.Math.*;
-public class Hexagono {
-    private double perimetro;
-    private double apotema;
-    private  double lad;
+public class Hexagono extends Figuras2D {
+    private double num1;
+    private double num2;
 
-    double areaHexa;
-    double perimteroHexa;
-    double apotemaHexa;
-
-    public double getAreaHexa() {
-        return areaHexa;
+    public Hexagono(double num1, double num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
     }
-
-    public double getPerimteroHexa() {
-        return perimteroHexa;
+    @Override
+    protected  void calculararea() {
+        area = ((num1 * num2) / 2);
     }
-
-    public double getApotemaHexa() {
-        return apotemaHexa;
+    protected void calcularperimetro(){
+        perimetro= 6*num1;
     }
-
-    public Hexagono(double perimetro, double apotema, double areaHexa) {
-        this.perimetro = perimetro;
-        this.apotema = apotema;
-        this.areaHexa = ((perimetro*apotema)/2);
-    }
-
-    public  void Hexagono_Peri(double lad,double perimteroHexa){
-        this.lad = lad;
-        this.perimteroHexa= 6*lad;
-    }
-    public  void Hexagono_Apot(double lad,double apotemaHexa){
-        this.lad = lad;
-        this.apotemaHexa= ((sqrt(3)*lad)/2);
+    protected void calculardiagonales(){
+        diagonales= ((sqrt(3)*num1)/2);
     }
 
 }
