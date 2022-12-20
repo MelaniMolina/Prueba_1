@@ -1,4 +1,4 @@
-package Geometria_1;
+package Geometria2D;
 
 import static java.lang.Math.*;
 

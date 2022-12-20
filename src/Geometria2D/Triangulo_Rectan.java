@@ -1,4 +1,4 @@
-package Geometria_1;
+package Geometria2D;
 
 public class Triangulo_Rectan {
     private  double opuesto;

@@ -1,12 +1,27 @@
 package Geometria3D;
 
 public class Cilindro {
-private double altura, radio, result=0;
+    double altura, radio , resultado;
 
-    public Cilindro(double altura, double radio, double result) {
+    public Cilindro(double altura, double radio, double resultado) {
         this.altura = altura;
         this.radio = radio;
-        this.result = result;
+        this.resultado = resultado;
+    }
+    public void cilArea(double altura, double radio, double resultado) {
+        this.altura = altura;
+        this.radio = radio;
+        this.resultado = (2*Math.PI*radio)*(radio+altura);
+    }
+    public  void cilPerimetro(double altura, double radio, double resultado) {
+        this.altura = altura;
+        this.radio = radio;
+        this.resultado =(2*Math.PI*radio)+altura;
+    }
+    public void cilVolumen(double altura, double radio, double resultado) {
+        this.altura = altura;
+        this.radio = radio;
+        this.resultado = Math.PI*Math.pow(radio,2)*altura;
     }
 
     public double getAltura() {
@@ -25,30 +40,11 @@ private double altura, radio, result=0;
         this.radio = radio;
     }
 
-    public double getResult() {
-        return result;
+    public double getResultado() {
+        return resultado;
     }
 
-    public void setResult(double result) {
-        this.result = result;
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
     }
-    public void cilArea(double result,double altura, double radio)
-    {
-        this.altura=altura;
-        this.radio=radio;
-        this.result=((2*(Math.PI)*radio)*(radio+altura));
-    }
-    public void cilPerimetro(double result,double altura, double radio)
-    {
-        this.altura=altura;
-        this.radio=radio;
-        this.result=((2*(Math.PI)*radio)+altura);
-    }
-    public void cilVolumen(double result,double altura, double radio)
-    {
-        this.altura=altura;
-        this.radio=radio;
-        this.result=((Math.PI)*(Math.pow(radio,2))*altura);
-    }
-
 }

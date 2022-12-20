@@ -22,7 +22,6 @@ public class Main {
     public static void main(String[] args) {
         int op = 0, op1 = 0, op2 = 0;
         int contin;
-        double num1,num2,num3,resultado;
         try {
             do{
                 System.out.print("\t-/-/-/-/-/ M E N U /-/-/-/-/-");
@@ -83,27 +82,31 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
+                                            double result = 0;
+                                            double rad;
                                             do {
                                                 System.out.print("\nIngrese el radio del Circulo: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0) {
+                                                rad = sc.nextDouble();
+                                                if (rad < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            } while (num1< 0);
-                                            Circulo c = new Circulo(num1);
-                                            System.out.println("El resultado del Area del Circulo es: " + df.format(c.getArea()));
+                                            } while (rad < 0);
+                                            Circulo area = new Circulo(rad, result);
+                                            System.out.println("El resultado del Area del Circulo es: " + df.format(area.getResultado()));
                                             System.out.println("");
                                             break;
                                         case 2:
+                                            double resultado = 0;
+                                            double lad;
                                             do {
                                                 System.out.print("\nIngrese el Lado del Cuadrado: ");
-                                                num1= sc.nextDouble();
-                                                if (num1 < 0 ){
+                                                lad = sc.nextDouble();
+                                                if (lad < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (num1 < 0);
-                                            Cuadrado cu = new Cuadrado(num1);
-                                            System.out.println("El resultado del Area del Cuadrado es: "+df.format(cu.getArea()));
+                                            }while (lad < 0);
+                                            Cuadrado a = new Cuadrado(lad,resultado);
+                                            System.out.println("El resultado del Area del Cuadrado es: "+df.format(a.getResul_area()));
                                             break;
                                         case 3:
                                             double resu = 0;
@@ -183,22 +186,24 @@ public class Main {
                                             System.out.println("\nEl resultado del Area del Pentagono es: "+df.format(area4.getAre_Penta()));
                                             break;
                                         case 7:
+                                            double r = 0;
+                                            double apt, per;
                                             do {
                                                 System.out.print("\nIngrese el Perimetro del Hexagono: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0){
+                                                per = sc.nextDouble();
+                                                if (per < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (num1 < 0);
+                                            }while (per < 0);
                                             do {
                                                 System.out.print("Ingrese el Apotema del Hexagono: ");
-                                                num2 = sc.nextDouble();
-                                                if ( num2 < 0){
+                                                apt = sc.nextDouble();
+                                                if ( apt < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (num2 < 0);
-                                            Hexagono h = new Hexagono(num1,num2);
-                                            System.out.println("\nEl resultado del Area del Hexagono es: "+df.format(h.getArea()));
+                                            }while (apt < 0);
+                                            Hexagono area1 = new Hexagono(per,apt,r);
+                                            System.out.println("\nEl resultado del Area del Hexagono es: "+df.format(area1.getAreaHexa()));
                                             break;
                                         case 8:
                                             double resultado6 = 0, bas, alt1;
@@ -296,26 +301,32 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
+                                            double resul = 0;
+                                            double radio;
                                             do {
                                                 System.out.print("\nIngrese el radio del Circulo: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0) {
+                                                radio = sc.nextDouble();
+                                                if (radio < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            } while (num1 < 0);
-                                            Circulo c = new Circulo(num1);
-                                            System.out.println("\nEl resultado del Perimetro es: " + df.format(c.getPerimetro()));
+                                            } while (radio < 0);
+                                            Circulo perimetro = new Circulo(radio, resul);
+                                            perimetro.Circulo_Perimetro(radio, resul);
+                                            System.out.println("\nEl resultado del Perimetro es: " + df.format(perimetro.getPerimetro()));
                                             break;
                                         case 2:
+                                            double res = 0;
+                                            double lado;
                                             do {
                                                 System.out.print("\nIngrese el Lado del Cuadrado: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0 ){
+                                                lado = sc.nextDouble();
+                                                if (lado < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (num1 < 0);
-                                            Cuadrado cu = new Cuadrado(num1);
-                                            System.out.println("\nEl resultado del Perimetro es: "+ df.format(cu.getPerimetro()));
+                                            }while (lado < 0);
+                                            Cuadrado p = new Cuadrado(lado,res);
+                                            p.Cuadrado_Peri(lado,res);
+                                            System.out.println("\nEl resultado del Perimetro es: "+ df.format(p.getResult_peri()));
                                             break;
                                         case 3:
                                             double result = 0 ;
@@ -380,15 +391,17 @@ public class Main {
                                             System.out.println("\nEl resultado del Perimetro del Pentagono es: "+df.format(perimetro5.getPeri_Penta()));
                                             break;
                                         case 7:
+                                            double re = 0, aux1 = 0, lado2;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Hexagono: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1< 0){
+                                                lado2 = sc.nextDouble();
+                                                if (lado2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (num1 < 0);
-                                            Hexagono h = new Hexagono(num1,num2=0);
-                                            System.out.println("\nEl resultado del Perimetro del Hexagono es: "+df.format(h.getPerimetro()));
+                                            }while (lado2 < 0);
+                                            Hexagono per = new Hexagono(lado2,re,aux1);
+                                            per.Hexagono_Peri(lado2,re);
+                                            System.out.println("\nEl resultado del Perimetro del Hexagono es: "+df.format(per.getPerimteroHexa()));
                                             break;
                                         case 8:
                                             double resultado8 = 0, lad2, base1;
@@ -480,26 +493,32 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
+                                            double resultado = 0;
+                                            double ra;
                                             do {
                                                 System.out.print("\nIngrese el la Longitud de Circulo: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0) {
+                                                ra = sc.nextDouble();
+                                                if (ra < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            } while (num1 < 0);
-                                            Circulo c = new Circulo(num1);
-                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(c.getDiagonales()));
+                                            } while (ra < 0);
+                                            Circulo diagonal = new Circulo(ra, resultado);
+                                            diagonal.Circulo_Diametro(ra, resultado);
+                                            System.out.println("\nEl resultado de la Diagonal es: " + df.format(diagonal.getDiametro()));
                                             break;
                                         case 2:
+                                            double result = 0;
+                                            double la;
                                             do {
                                                 System.out.print("\nIngrese el Lado de la Diagonal: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0){
+                                                la = sc.nextDouble();
+                                                if (la < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (num1 < 0);
-                                            Cuadrado cu = new Cuadrado(num1);
-                                            System.out.println("\nEl resultado de la Diagonal es: "+df.format(cu.getDiagonales()));
+                                            }while (la < 0);
+                                            Cuadrado d = new Cuadrado(la,result);
+                                            d.Cuadrado_Diago(la,result);
+                                            System.out.println("\nEl resultado de la Diagonal es: "+df.format(d.getResult_diago()));
                                             break;
                                         case 3:
                                             double resul_D = 0;
@@ -576,15 +595,17 @@ public class Main {
                                             System.out.println("\nEl resultado del Apotema del Pentagono es: "+df.format(altura2.getApotema_Penta()));
                                             break;
                                         case 7:
+                                            double r = 0 , aux2 =0, lados2;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Hexagono: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 <  0 ){
+                                                lados2 = sc.nextDouble();
+                                                if (lados2 <  0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (num1 < 0 );
-                                            Hexagono h = new Hexagono(num1,num2=0);
-                                            System.out.println("\nEl resultado el Apotema del Hexagono es: "+df.format(h.getDiagonales()));
+                                            }while (lados2 < 0 );
+                                            Hexagono apotema = new Hexagono(lados2,r,aux2);
+                                            apotema.Hexagono_Apot(lados2,r);
+                                            System.out.println("\nEl resultado el Apotema del Hexagono es: "+df.format(apotema.getApotemaHexa()));
                                             break;
                                         case 8:
                                             double resultado9 = 0, lad4, base2, angulo;
@@ -722,7 +743,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0, resultado=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -730,7 +751,7 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
+                                            Cubo cubo = new Cubo(lado, resultado);
                                             cubo.cuboArea(lado, resultado);
                                             System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
 
@@ -942,7 +963,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0, resultado=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -950,7 +971,7 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
+                                            Cubo cubo = new Cubo(lado, resultado);
                                             cubo.cuboPerimetro(lado, resultado);
                                             System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
                                             break;
@@ -1133,7 +1154,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0, resultado=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -1141,7 +1162,7 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
+                                            Cubo cubo = new Cubo(lado, resultado);
                                             cubo.cuboVolumen(lado, resultado);
                                             System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
 
@@ -1287,9 +1308,9 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             }while (altura12 <0);
-                                            Tronco_cono t = new Tronco_cono(G,g,altura12,resultado13);
-                                            t.Tronco_cono_Volumen(G,g,altura12);
-                                            System.out.println("\nEl resultado del volumen es: " + df.format(t.getVolumen_TC()));
+                                            Tronco_cono c = new Tronco_cono(G,g,altura12,resultado13);
+                                            c.Tronco_cono_Volumen(G,g,altura12);
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(c.getVolumen_TC()));
                                             break;
                                         case 9:
 

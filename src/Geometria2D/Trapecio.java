@@ -1,5 +1,5 @@
-package Geometria_1;
-import static java.lang.Math.*;
+package Geometria2D;
+
 public class Trapecio {
     private double baseMayor;
     private double baseMenor;
