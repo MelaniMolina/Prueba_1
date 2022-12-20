@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class PiramideHexagonal {
+public class PiramideHexagonal  extends Operaciones{
 
 
         double ladoL=0;
@@ -20,7 +20,8 @@ public class PiramideHexagonal {
             this.altura = altura;
             this.resultado = resultado;
         }
-        public void ayhPiramideHexagonañ(double ladoL, double ladoB, double apotemaB, double apotemaL, double altura, double resultado) {
+    @Override
+        public void altura() {
             this.ladoL = ladoL;
             this.ladoB = ladoB;
             this.apotemaB = apotemaB;
@@ -28,7 +29,8 @@ public class PiramideHexagonal {
             this.altura = altura;
             this.resultado = resultado;
         }
-        public void areaPiramideHexagonal(double ladoL, double ladoB, double apotemaB, double apotemaL, double altura, double resultado) {
+    @Override
+        public void area() {
             this.ladoL = ladoL;
             this.ladoB = ladoB;
             this.apotemaB = apotemaB;
@@ -36,7 +38,8 @@ public class PiramideHexagonal {
             this.altura = altura;
             this.resultado = resultado;
         }
-        public void volumenPiramideHexagonal(double ladoL, double ladoB, double apotemaB, double apotemaL, double altura, double resultado) {
+    @Override
+        public void volumen() {
             this.ladoL = ladoL;
             this.ladoB = ladoB;
             this.apotemaB = apotemaB;
@@ -45,53 +48,7 @@ public class PiramideHexagonal {
             this.resultado = resultado;
         }
 
-        public double getLadoL() {
-            return ladoL;
-        }
 
-        public void setLadoL(double ladoL) {
-            this.ladoL = ladoL;
-        }
-
-        public double getLadoB() {
-            return ladoB;
-        }
-
-        public void setLadoB(double ladoB) {
-            this.ladoB = ladoB;
-        }
-
-        public double getApotemaB() {
-            return apotemaB;
-        }
-
-        public void setApotemaB(double apotemaB) {
-            this.apotemaB = apotemaB;
-        }
-
-        public double getApotemaL() {
-            return apotemaL;
-        }
-
-        public void setApotemaL(double apotemaL) {
-            this.apotemaL = apotemaL;
-        }
-
-        public double getAltura() {
-            return altura;
-        }
-
-        public void setAltura(double altura) {
-            this.altura = altura;
-        }
-
-        public double getResultado() {
-            return resultado;
-        }
-
-        public void setResultado(double resultado) {
-            this.resultado = resultado;
-        }
 
 
 }

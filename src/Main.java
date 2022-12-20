@@ -637,6 +637,7 @@ public class Main {
                         }
                         break;
                     case 2:
+
                         System.out.print("\t-/-/-/-/-/ MENU Geometria3D /-/-/-/-/-");
                         System.out.println("\n");
                         System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
@@ -679,7 +680,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0, r=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -687,10 +688,11 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
-                                            cubo.cuboArea(lado, resultado);
-                                            System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
-
+                                            System.out.println("Ingrese el lado de su cubo: ");
+                                            lado= sc.nextDouble();
+                                            Cubo cubo=new Cubo(lado,r);
+                                            cubo.area();
+                                            System.out.println("EL area del cubo es: "+cubo.getResultado());
                                             break;
                                         case 2:
                                             double altura=0, result =0, radio=0;
@@ -709,8 +711,8 @@ public class Main {
                                                 }
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
-                                            cilindro.cilArea(altura,radio, result);
-                                            System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResult()));
+                                            cilindro.area();
+                                            System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResultado()));
 
 
                                             break;
@@ -724,7 +726,7 @@ public class Main {
                                                 }
                                             } while (lado1 < 0);
                                             TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
-                                            tetraedro.alturaTetraedro(lado1,resultad);
+                                            tetraedro.altura();
                                             System.out.println("\nEl resultado de la altura es: " + df.format(tetraedro.getResultado()));
 
                                             break;
@@ -738,7 +740,7 @@ public class Main {
                                                 }
                                             } while (rad < 0);
                                             Esfera esfera=new Esfera(rad,resu);
-                                            esfera.areaEsfera(rad,resu);
+                                            esfera.area();
                                             System.out.println("\nEl resultado del  es: " + df.format(esfera.getResul()));
 
 
@@ -755,7 +757,7 @@ public class Main {
                                                 }
                                             } while (olado < 0);
                                             Octaedro octaedro=new Octaedro(olado, oresultado);
-                                            octaedro.alturaOctaedro(olado,olado);
+                                            octaedro.altura();
                                             System.out.println("\nEl resultado de la altura es: " + df.format(octaedro.getResultado()));
 
 
@@ -784,7 +786,7 @@ public class Main {
                                                 }
                                             } while (alturaP < 0);
                                             PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
-                                            prismaRegular.areaPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            prismaRegular.area();
                                             System.out.println("\nEl resultado del area es: " + df.format(prismaRegular.getResultado()));
 
 
@@ -806,8 +808,8 @@ public class Main {
                                                 }
                                             } while (radioC < 0);
 
-                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
-                                            cono.alturaCono(ladoG,radioC,alturaC,resultadoC);
+                                            Cono cono=new Cono(ladoG,radioC,alturaC,resultadoC);
+                                            cono.altura();
                                             System.out.println("\nEl resultado de la altura es: " + df.format(cono.getResultado()));
 
                                             break;
@@ -835,7 +837,7 @@ public class Main {
                                                 }
                                             }while (altura14 <0);
                                             Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
-                                            co.Tronco_cono_Lateral(G,g,altura14,radioos);
+                                            co.Tronco_cono_Lateral();
                                             System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
                                             break;
                                         case 9:
@@ -899,7 +901,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0,r=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -907,8 +909,8 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
-                                            cubo.cuboPerimetro(lado, resultado);
+                                            Cubo cubo = new Cubo(lado,r);
+                                            cubo.perimetro();
                                             System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
                                             break;
                                         case 2:
@@ -928,8 +930,8 @@ public class Main {
                                                 }
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
-                                            cilindro.cilArea(altura,radio, result);
-                                            System.out.println("\nEl resultado del perimetro es: " + df.format(cilindro.getResult()));
+                                            cilindro.perimetro();
+                                            System.out.println("\nEl resultado del perimetro es: " + df.format(cilindro.getResultado()));
                                             break;
                                         case 3:
                                             double lado1=0, resultad=0;
@@ -941,7 +943,7 @@ public class Main {
                                                 }
                                             } while (lado1 < 0);
                                             TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
-                                            tetraedro.areaTetraedro(lado1,resultad);
+                                            tetraedro.area();
                                             System.out.println("\nEl resultado del area es: " + df.format(tetraedro.getResultado()));
 
                                             break;
@@ -955,7 +957,7 @@ public class Main {
                                                 }
                                             } while (rad < 0);
                                             Esfera esfera=new Esfera(rad,resu);
-                                            esfera.perimetroEsfera(rad,resu);
+                                            esfera.perimetro();
                                             System.out.println("\nEl resultado del  es: " + df.format(esfera.getResul()));
 
                                             break;
@@ -969,7 +971,7 @@ public class Main {
                                                 }
                                             } while (olado < 0);
                                             Octaedro octaedro=new Octaedro(olado, oresultado);
-                                            octaedro.areaOctaedro(olado,olado);
+                                            octaedro.area();
                                             System.out.println("\nEl resultado de la area es: " + df.format(octaedro.getResultado()));
 
 
@@ -999,7 +1001,7 @@ public class Main {
                                                 }
                                             } while (alturaP < 0);
                                             PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
-                                            prismaRegular.perimetroPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            prismaRegular.perimetro();
                                             System.out.println("\nEl resultado del perimetro es: " + df.format(prismaRegular.getResultado()));
 
 
@@ -1021,8 +1023,8 @@ public class Main {
                                                 }
                                             } while (radioC < 0);
 
-                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
-                                            cono.areaCono(ladoG,radioC,alturaC,resultadoC);
+                                            Cono cono=new Cono(ladoG,radioC,alturaC,resultadoC);
+                                            cono.area();
                                             System.out.println("\nEl resultado del area es: " + df.format(cono.getResultado()));
 
                                             break;
@@ -1050,7 +1052,7 @@ public class Main {
                                                 }
                                             }while (altura14 <0);
                                             Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
-                                            co.Tronco_cono_Lateral(G,g,altura14,radioos);
+                                            co.Tronco_cono_Lateral();
                                             System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
                                             break;
                                         case 9:
@@ -1090,7 +1092,7 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0;
+                                            double lado=0,r=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
                                                 lado = sc.nextDouble();
@@ -1098,10 +1100,11 @@ public class Main {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
                                             } while (lado < 0);
-                                            Cubo cubo = new Cubo(lado, resultado=0);
-                                            cubo.cuboVolumen(lado, resultado);
-                                            System.out.println("\nEl resultado del area es: " + df.format(cubo.getResultado()));
-
+                                            System.out.println("Ingrese el lado de su cubo: ");
+                                            lado= sc.nextDouble();
+                                            Cubo cubo=new Cubo(lado,r);
+                                            cubo.volumen();
+                                            System.out.println("El volumen del cubo es: "+cubo.getResultado());
                                             break;
                                         case 2:
 
@@ -1121,8 +1124,8 @@ public class Main {
                                                 }
                                             } while (altura < 0);
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
-                                            cilindro.cilVolumen(altura,radio, result);
-                                            System.out.println("\nEl resultado del volumrn es: " + df.format(cilindro.getResult()));
+                                            cilindro.volumen();
+                                            System.out.println("\nEl resultado del volumrn es: " + df.format(cilindro.getResultado()));
 
                                             break;
                                         case 3:
@@ -1135,7 +1138,7 @@ public class Main {
                                                 }
                                             } while (lado1 < 0);
                                             TetraedroRegular tetraedro=new TetraedroRegular(lado1,resultad);
-                                            tetraedro.volumwnTetraedro(lado1,resultad);
+                                            tetraedro.volumen();
                                             System.out.println("\nEl resultado del volumen es: " + df.format(tetraedro.getResultado()));
                                             break;
                                         case 4:
@@ -1148,8 +1151,8 @@ public class Main {
                                                 }
                                             } while (rad < 0);
                                             Esfera esfera=new Esfera(rad,resu);
-                                            esfera.volumenEsfera(rad,resu);
-                                            System.out.println("\nEl resultado del volumen es: " + df.format(esfera.getResul()));
+                                            esfera.volumen();
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(esfera.getResultado()));
 
 
                                             break;
@@ -1163,7 +1166,7 @@ public class Main {
                                                 }
                                             } while (olado < 0);
                                             Octaedro octaedro=new Octaedro(olado, oresultado);
-                                            octaedro.volumwnOctaedro(olado,olado);
+                                            octaedro.volumen();
                                             System.out.println("\nEl resultado del volumen es: " + df.format(octaedro.getResultado()));
 
 
@@ -1193,7 +1196,7 @@ public class Main {
                                                 }
                                             } while (alturaP < 0);
                                             PrismaRegular prismaRegular=new PrismaRegular(ladoA,ladoB, alturaP, resultaP);
-                                            prismaRegular.volumenPrismaRegular(ladoA,ladoB,alturaP,resultaP);
+                                            prismaRegular.volumen();
                                             System.out.println("\nEl resultado del volumrn es: " + df.format(prismaRegular.getResultado()));
 
 
@@ -1215,8 +1218,8 @@ public class Main {
                                                 }
                                             } while (radioC < 0);
 
-                                            Cono cono=new Cono(ladoG,radioC, alturaC, resultadoC);
-                                            cono.volumenCono(ladoG,radioC,alturaC,resultadoC);
+                                            Cono cono=new Cono(ladoG,radioC,alturaC,resultadoC);
+                                            cono.volumen();
                                             System.out.println("\nEl resultado del volumen es: " + df.format(cono.getResultado()));
 
 
@@ -1272,5 +1275,17 @@ public class Main {
         }
 
     }
+/*
+        System.out.println("Ingrese el lado de su cubo: ");
+        double lado= sc.nextDouble();
+        Cubo cubo=new Cubo(lado,0);
+        cubo.area();
+        System.out.println("EL area del cubo es: "+cubo.getResultado());
+        cubo.perimetro();
+        System.out.println("El perimetro del cubo es: "+cubo.getResultado());
+        cubo.volumen();
+        System.out.println("El columen del cubo es: "+cubo.getResultado());*/
+
+}
 
 }

@@ -1,42 +1,27 @@
 package Geometria3D;
 
-public class Cubo {
-    double vlado;
-    double resultado;
+public class Cubo extends Operaciones{
+    double lado, resultado;
 
-    public Cubo(double vlado, double resultado) {
-        this.vlado = vlado;
+    public Cubo(double lado, double resultado) {
+        this.lado = lado;
         this.resultado = resultado;
     }
 
-    public double getVlado() {
-        return vlado;
+    @Override
+    public void area() {
+        resultado=(Math.pow(lado, 2)) * 6;
     }
 
-    public void setVlado(double vlado) {
-        this.vlado = vlado;
+    @Override
+    public void perimetro() {
+        resultado=lado*12;
     }
 
-    public double getResultado() {
-        return resultado;
+    @Override
+    public void volumen() {
+        resultado=Math.pow(lado, 3);
     }
 
-    public void setResultado(double resultado) {
-        this.resultado = resultado;
-    }
-    public void cuboArea(double vlado, double resultado)
-    { this.vlado=vlado;
-        this.resultado=(Math.pow(vlado, 2)) * 6;
 
-    }
-    public void cuboPerimetro(double vlado, double resultado)
-    { this.vlado=vlado;
-        this.resultado=vlado*12;
-
-    }
-    public void cuboVolumen(double vlado, double resultado)
-    { this.vlado=vlado;
-        this.resultado=Math.pow(vlado, 3);
-
-    }
 }

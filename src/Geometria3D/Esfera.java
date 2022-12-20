@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class Esfera {
+public class Esfera  extends Operaciones {
 double radio;
 double resul=0;
 
@@ -8,16 +8,18 @@ double resul=0;
         this.radio = radio;
         this.resul = 4*(Math.PI*(Math.pow(radio,2)));
     }
-
-    public void areaEsfera(double radio, double resul) {
+    @Override
+    public void area() {
         this.radio = radio;
         this.resul = resul;
     }
-    public void perimetroEsfera(double radio, double resul) {
+    @Override
+    public void perimetro() {
         this.radio = radio;
         this.resul = resul;
     }
-    public void volumenEsfera(double radio, double resul) {
+    @Override
+    public void volumen() {
         this.radio = radio;
         this.resul =  (4/3)*(Math.PI*(Math.pow(radio,3)));
     }

@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class TetraedroRegular {
+public class TetraedroRegular extends Operaciones {
     double lado;
     double resultado;
 
@@ -9,35 +9,24 @@ public class TetraedroRegular {
 
         this.resultado = resultado;
     }
-    public  void alturaTetraedro(double lado,  double resultado) {
+    @Override
+    public  void altura() {
         this.lado = lado;
 
         this.resultado = ((lado)*((Math.sqrt(6))/3));
     }
-    public void areaTetraedro(double lado,  double resultado) {
+    @Override
+    public void area() {
         this.lado = lado;
 
         this.resultado = ((Math.pow(lado,2))*(Math.sqrt(3)));
     }
-    public  void volumwnTetraedro(double lado,  double resultado) {
+    @Override
+    public  void volumen() {
         this.lado = lado;
 
         this.resultado =((Math.pow(lado,2))*((Math.sqrt(3))/12));
     }
 
-    public double getLado() {
-        return lado;
-    }
 
-    public void setLado(double lado) {
-        this.lado = lado;
-    }
-
-    public double getResultado() {
-        return resultado;
-    }
-
-    public void setResultado(double resultado) {
-        this.resultado = resultado;
-    }
 }
