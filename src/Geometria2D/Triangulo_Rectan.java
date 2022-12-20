@@ -1,44 +1,31 @@
 package Geometria2D;
 
-public class Triangulo_Rectan {
+public class Triangulo_Rectan extends Figuras2D {
     private  double opuesto;
     private double adyacente;
     private double hipotenusa;
-    double areTriAn;
-    double perimetroTriAn;
-    double AnguloTriAn;
 
-    public double getAreTriAn() {
-        return areTriAn;
-    }
-
-    public double getPerimetroTriAn() {
-        return perimetroTriAn;
-    }
-
-    public double getAnguloTriAn() {
-        return AnguloTriAn;
-    }
-
-    public Triangulo_Rectan(double opuesto, double adyacente, double areTriAn) {
-        this.opuesto = opuesto;
-        this.adyacente = adyacente;
-        this.areTriAn =((opuesto * adyacente)/2);
-    }
-    public void Triangulo_RectanPerimetro(double opuesto,double adyacente,double hipotenusa,double perimetroTriAn){
+    public Triangulo_Rectan(double opuesto, double adyacente, double hipotenusa) {
         this.opuesto = opuesto;
         this.adyacente = adyacente;
         this.hipotenusa = hipotenusa;
-        this.perimetroTriAn = (opuesto+adyacente+hipotenusa);
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
+    }
+     @Override
+    protected void calculararea() {
+
+        this.area =((opuesto * adyacente)/2);
+    }
+    protected void calcularperimetro() {
+        this.perimetro = (opuesto+adyacente+hipotenusa);
     }
 
-    public void Triangulo_RectanAngulo(double opuesto,double hipotenusa,double AnguloTriAn ){
-        this.opuesto = opuesto;
-        this.hipotenusa = hipotenusa;
+    protected void calculardiagonales(){
         double op =Math.asin(opuesto/hipotenusa);
         double result= (op*180)/3.141592654;
-        this.AnguloTriAn = result ;
-
+        this.diagonales = result ;
     }
 
 

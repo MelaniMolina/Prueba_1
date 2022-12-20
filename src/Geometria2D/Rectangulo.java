@@ -1,37 +1,26 @@
 package Geometria2D;
 import static java.lang.Math.*;
-public class Rectangulo {
+public class Rectangulo extends Figuras2D {
     private double base;
     private double altura;
-    double area;
-    double perim;
-    double diago;
 
-    public double getArea() {
-        return area;
-    }
-
-    public double getPerim() {
-        return perim;
-    }
-
-    public double getDiago() {
-        return diago;
-    }
-
-    public Rectangulo(double base, double altura, double area) {
+    public Rectangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
+    }
+     @Override
+    protected void calculararea() {
         this.area = (base*altura);
+
     }
-    public void Rectangulo_Perimetro(double base , double altura , double perim){
-        this.base = base;
-        this.altura = altura;
-        this.perim = 2*(altura*base);
+    protected void calcularperimetro(){
+
+        this.perimetro = 2*(altura*base);
     }
-    public void Rectangulo_Diagonal(double base,double altura ,double diago){
-        this.base = base;
-        this.altura = altura;
-        this.diago = sqrt(pow(base,2)+pow(altura,2));
+    protected void calculardiagonales(){
+        this.diagonales = sqrt(pow(base,2)+pow(altura,2));
     }
 }

@@ -1,41 +1,27 @@
 package Geometria2D;
 import static java.lang.Math.*;
-public class Paralelogramo {
-    private  double base;
-    private  double altura;
-    private  double lado;
-    private double angulo;
-    double areParale;
-    double periParale;
-    double diagonParale;
+public class Paralelogramo extends Figuras2D{
+    private  double num1;
+    private  double num2;
+    private  double num3;
 
-    public double getAreParale() {
-        return areParale;
+    public Paralelogramo(double num1, double num2, double num3) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        calculararea();
+        calcularperimetro();
+        calculardiagonales();
     }
-
-    public double getPeriParale() {
-        return periParale;
+    @Override
+    protected void calculararea(){
+        this.area = num1 * num2;
     }
-
-    public double getDiagonParale() {
-        return diagonParale;
+    protected void calcularperimetro(){
+        this.perimetro = (2*(num1*num2));
     }
-
-    public Paralelogramo(double base, double altura, double areParale) {
-        this.base = base;
-        this.altura = altura;
-        this.areParale = base*altura;
-    }
-    public  void Paralelogramo_Perime(double lado,double base , double periParale ){
-        this.lado = lado;
-        this.base= base;
-        this.periParale = (2*(lado*base));
-    }
-    public void Paralelogramo_Diagonal(double lado,double base,double angulo, double diagonParale ){
-        this.lado = lado;
-        this.base = base;
-        this.angulo = angulo;
-        this.diagonParale = sqrt(pow(lado,2)+pow(base,2)-(lado*base)*Math.cos(angulo));
+    protected void calculardiagonales(){
+        this.diagonales = sqrt(pow(num1,2)+pow(num2,2)-(num1*num2)*Math.cos(num3));
 
     }
 }

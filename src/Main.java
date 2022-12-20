@@ -1,4 +1,3 @@
-
 import Geometria3D.Cubo;
 import Geometria2D.*;
 import java.lang.Math.*;
@@ -13,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         int op = 0, op1 = 0, op2 = 0;
         int contin;
-        double num1,num2,num3,resultado;
+        double num1,num2,num3,num4,resultado;
         try {
             do{
                 System.out.print("\t-/-/-/-/-/ M E N U /-/-/-/-/-");
@@ -97,81 +96,76 @@ public class Main {
                                             System.out.println("El resultado del Area del Cuadrado es: "+df.format(cu.getArea()));
                                             break;
                                         case 3:
-                                            double resu = 0;
-                                            double altura, base;
                                             do {
                                                 System.out.print("\nIngrese la Base del Rectangulo: ");
-                                                base = sc.nextDouble();
-                                                if (base < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (base < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Altura del Rectangulo: ");
-                                                altura = sc.nextDouble();
-                                                if (altura < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (altura < 0);
-                                            Rectangulo ar = new Rectangulo(base,altura,resu);
-                                            System.out.println("\nEl resultado del Area del Rectangulo es: "+df.format(ar.getArea()));
+                                            }while (num2 < 0);
+                                            Rectangulo r = new Rectangulo(num1,num2);
+                                            System.out.println("\nEl resultado del Area del Rectangulo es: "+df.format(r.getArea()));
                                             break;
                                         case 4:
-                                            double re = 0, mayor, menor;
                                             do {
                                                 System.out.print("\nIngrese la Diagonal Mayor del Rombo: ");
-                                                mayor = sc.nextDouble();
-                                                if (mayor < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (mayor < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Diagonal Menor del Rombo: ");
-                                                menor = sc.nextDouble();
-                                                if (menor < 0 ){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (menor < 0);
-                                            Rombo are = new Rombo(mayor,menor,re);
-                                            System.out.println("\nEl resultado del Area del Rombo es: "+df.format(are.getAreaR()));
+                                            }while (num1 < 0);
+                                            Rombo rombo = new Rombo(num1,0);
+                                            System.out.println("\nEl resultado del Area del Rombo es: "+df.format(rombo.getArea()));
                                             break;
                                         case 5:
-                                            double resultado2 = 0, b, a1;
                                             do {
                                                 System.out.print("\nIngrese la Base del Triangulo: ");
-                                                b = sc.nextDouble();
-                                                if (b < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (b < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Altura del Triangulo: ");
-                                                a1 = sc.nextDouble();
-                                                if (a1 < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (a1 < 0);
-                                            Triangulo area2= new Triangulo(b,a1,resultado2);
-                                            System.out.println("\nEl resultado del Area del Triangulo es: "+df.format(area2.getArea_Trian()));
+                                            }while (num2 < 0);
+                                            Triangulo tri = new Triangulo(num1,num2,0);
+                                            System.out.println("\nEl resultado del Area del Triangulo es: "+df.format(tri.getArea()));
                                             break;
                                         case 6:
-                                            double resultado5 = 0, peri, ap;
                                             do {
                                                 System.out.print("\nIngrese el Perimetro del Pentagono: ");
-                                                peri = sc.nextDouble();
-                                                if (peri < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (peri < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese el Apotema del Pentagono: ");
-                                                ap = sc.nextDouble();
-                                                if (ap < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (ap < 0);
-                                            Pentagono area4 = new Pentagono(peri,ap,resultado5);
-                                            System.out.println("\nEl resultado del Area del Pentagono es: "+df.format(area4.getAre_Penta()));
+                                            }while (num2 < 0);
+                                            Pentagono p = new Pentagono(num1,num2,0,0);
+                                            System.out.println("\nEl resultado del Area del Pentagono es: "+df.format(p.getArea()));
                                             break;
                                         case 7:
                                             do {
@@ -192,68 +186,65 @@ public class Main {
                                             System.out.println("\nEl resultado del Area del Hexagono es: "+df.format(h.getArea()));
                                             break;
                                         case 8:
-                                            double resultado6 = 0, bas, alt1;
                                             do {
                                                 System.out.print("\nIngrese la Base del Paralelogramo: ");
-                                                bas = sc.nextDouble();
-                                                if (bas < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (bas < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Altura del Paralelogramo: ");
-                                                alt1 = sc.nextDouble();
-                                                if (alt1 <0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (alt1 < 0);
-                                            Paralelogramo are1 = new Paralelogramo(bas,alt1,resultado6);
-                                            System.out.println("\nEl resultado del Area del Paralelogramo es: "+df.format(are1.getAreParale()));
+                                            }while (num2 < 0);
+                                            Paralelogramo pa = new Paralelogramo(num1,num2,num3=0);
+                                            System.out.println("\nEl resultado del Area del Paralelogramo es: "+df.format(pa.getArea()));
                                             break;
                                         case 9:
-                                            double resul=0, baseM, basem, alt3;
                                             do {
                                                 System.out.print("\nIngrese la Base Mayor del Trapecio: ");
-                                                baseM = sc.nextDouble();
-                                                if (baseM < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (baseM < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Base Menor del Trapecio: ");
-                                                basem = sc.nextDouble();
-                                                if (basem < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while(basem < 0);
+                                            }while(num2 < 0);
                                             do {
                                                 System.out.print("Ingrese la Altura del Trapecio: ");
-                                                alt3 = sc.nextDouble();
-                                                if (alt3<0){
+                                                num3 = sc.nextDouble();
+                                                if (num3<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (alt3 <0);
-                                            Trapecio area5 = new Trapecio(baseM,basem,alt3,resul);
-                                            System.out.println("\nEl resultado del Area del Trapecio es: "+df.format(area5.getAreaTrapecio()));
+                                            }while (num3 <0);
+                                            Trapecio t = new Trapecio(num1,num2,num3,0,0);
+                                            System.out.println("\nEl resultado del Area del Trapecio es: "+df.format(t.getArea()));
                                             break;
                                         case 10:
-                                            double resultado11 = 0, op3, ady;
                                             do {
                                                 System.out.print("\nIngrese el Cateto Opuesto del Triangulo Rectangulo: ");
-                                                op3 = sc.nextDouble();
-                                                if (op3<0){
+                                                num1 = sc.nextDouble();
+                                                if (num1<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (op3<0);
+                                            }while (num1<0);
                                             do {
                                                 System.out.print("Ingrese el Cateto Adyacentes del Triangulo Rectangulo: ");
-                                                ady = sc.nextDouble();
-                                                if (ady < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (ady <0);
-                                            Triangulo_Rectan area6 = new Triangulo_Rectan( op3,ady,resultado11);
-                                            System.out.println("\nEl resultado del Area del Triangulo Rectangulo es: "+df.format(area6.getAreTriAn()));
+                                            }while (num2 <0);
+                                            Triangulo_Rectan TR = new Triangulo_Rectan(num1,num2,0);
+                                            System.out.println("\nEl resultado del Area del Triangulo Rectangulo es: "+df.format(TR.getArea()));
                                             break;
                                     }
                                     System.out.println("\nDesea sea realizar el calculo de otro area 1.SI: ");
@@ -309,66 +300,57 @@ public class Main {
                                             System.out.println("\nEl resultado del Perimetro es: "+ df.format(cu.getPerimetro()));
                                             break;
                                         case 3:
-                                            double result = 0 ;
-                                            double base, altu;
                                             do {
                                                 System.out.print("\nIngrese la Altura del Rectangulo: ");
-                                                altu = sc.nextDouble();
-                                                if (altu < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (altu < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.println("Ingrese la Base del Rectangulo: ");
-                                                base = sc.nextDouble();
-                                                if (base < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (base < 0);
-                                            Rectangulo pe = new Rectangulo(altu,base,result);
-                                            pe.Rectangulo_Perimetro(altu,base,result);
-                                            System.out.println("\nEl resultado del Perimetro es: "+df.format(pe.getPerim()));
+                                            }while (num2 < 0);
+                                            Rectangulo r  = new Rectangulo(num1,num2);
+                                            System.out.println("\nEl resultado del Perimetro es: "+df.format(r.getPerimetro()));
                                             break;
                                         case 4:
-                                            double resultado1 = 0, lad, ar;
                                             do{
                                                 System.out.print("\nIngrese el Valor del Lado del Rombo: ");
-                                                lad = sc.nextDouble();
-                                                if (lad < 0 ){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            } while (lad < 0);
+                                            } while (num1 < 0);
                                             System.out.print("Ingrese le Valor del Area del Rombo: ");
-                                            ar = sc.nextDouble();
-                                            Rombo perimetro1 = new Rombo(lad,ar,resultado1);
-                                            perimetro1.RomboPeri(lad,ar,resultado1);
-                                            System.out.println("\nEl resultado del perimetro del Rombo es: "+df.format(perimetro1.getPerimetroR()));
+                                            num2 = sc.nextDouble();
+                                            Rombo rombo = new Rombo(num1,num2);
+                                            System.out.println("\nEl resultado del perimetro del Rombo es: "+df.format(rombo.getPerimetro()));
                                             break;
                                         case 5:
-                                            double resultado3 = 0, aux = 0, lado1;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Triangulo: ");
-                                                lado1 = sc.nextDouble();
-                                                if (lado1 < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lado1 < 0);
-                                            Triangulo perimetro3= new Triangulo(resultado3,lado1, aux);
-                                            perimetro3.Triangulo_Per(lado1,resultado3);
-                                            System.out.println("\nEl resultado del Perimetro del Triangulo es: "+df.format(perimetro3.getPerimetro_Trian()));
+                                            }while (num1 < 0);
+                                            Triangulo trian = new Triangulo(num1,0,0);
+                                            System.out.println("\nEl resultado del Perimetro del Triangulo es: "+df.format(trian.getPerimetro()));
                                             break;
                                         case 6:
-                                            double resultado4=0,aux3 = 0, lados4;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Pentagono: ");
-                                                lados4 = sc.nextDouble();
-                                                if (lados4<0){
+                                                num1 = sc.nextDouble();
+                                                if (num1<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lados4 < 0 );
-                                            Pentagono perimetro5 = new Pentagono(lados4,resultado4,aux3);
-                                            perimetro5.Pentagono_Per(lados4,resultado4);
-                                            System.out.println("\nEl resultado del Perimetro del Pentagono es: "+df.format(perimetro5.getPeri_Penta()));
+                                            }while (num1 < 0 );
+                                            Pentagono pen = new Pentagono(num1,0,0,0);
+                                            System.out.println("\nEl resultado del Perimetro del Pentagono es: "+df.format(pen.getPerimetro()));
                                             break;
                                         case 7:
                                             do {
@@ -382,58 +364,54 @@ public class Main {
                                             System.out.println("\nEl resultado del Perimetro del Hexagono es: "+df.format(h.getPerimetro()));
                                             break;
                                         case 8:
-                                            double resultado8 = 0, lad2, base1;
                                             do {
                                                 System.out.print("\nIngrese el Lado del Paralelogramo: ");
-                                                lad2 = sc.nextDouble();
-                                                if (lad2 <0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lad2 < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Base del Paralelogramo: ");
-                                                base1 = sc.nextDouble();
-                                                if (base1 < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (base1 < 0);
-                                            Paralelogramo perimetro8 = new Paralelogramo(lad2,base1,resultado8);
-                                            perimetro8.Paralelogramo_Perime(lad2,base1,resultado8);
-                                            System.out.println("\nEl resultado del Perimetro del Paralelogramo es: "+df.format(perimetro8.getPeriParale()));
+                                            }while (num2 < 0);
+                                            Paralelogramo p = new Paralelogramo(num1,num2,0);
+                                            System.out.println("\nEl resultado del Perimetro del Paralelogramo es: "+df.format(p.getPerimetro()));
                                             break;
                                         case 9:
-                                            double resul3=0, lad5, mayor,lad10, menor ;
                                             do {
                                                 System.out.print("\nIngrese el Lado del Trapecio: ");
-                                                lad5 = sc.nextDouble();
-                                                if (lad5 <0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lad5 < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Base Mayor del Trapecio: ");
-                                                mayor = sc.nextDouble();
-                                                if (mayor <0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (mayor < 0);
+                                            }while (num2 < 0);
                                             do {
                                                 System.out.print("Ingrese el Segundo Lado del Trapecio: ");
-                                                lad10 = sc.nextDouble();
-                                                if (lad10<0){
+                                                num3 = sc.nextDouble();
+                                                if (num3<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (lad10<0);
+                                            }while (num3<0);
                                             do {
                                                 System.out.print("Ingrese la Base Menor del Trapecio: ");
-                                                menor = sc.nextDouble();
-                                                if (menor<0){
+                                                 num4 = sc.nextDouble();
+                                                if (num4<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo porfavor");
                                                 }
-                                            }while (menor<0);
-                                            Trapecio perimetro10 = new Trapecio(lad5,mayor,lad10,menor);
-                                            perimetro10.Trapecio_Peri(lad5,mayor,lad10,menor,resul3);
-                                            System.out.println("\nEl resultado del Perimetro del Trapecio es: "+df.format(perimetro10.getPerimetroTrapecio()));
+                                            }while (num4<0);
+                                            Trapecio t  = new Trapecio(num1,num2,num3,num4,0);
+                                            System.out.println("\nEl resultado del Perimetro del Trapecio es: "+df.format(t.getPerimetro()));
                                             break;
                                         case 10:
 
@@ -493,78 +471,69 @@ public class Main {
                                             System.out.println("\nEl resultado de la Diagonal es: "+df.format(cu.getDiagonales()));
                                             break;
                                         case 3:
-                                            double resul_D = 0;
-                                            double bas, al;
                                             do {
                                                 System.out.print("\nIngrese la Base del Rectangulo: ");
-                                                bas = sc.nextDouble();
-                                                if (bas < 0) {
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (bas < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Altura del Rectangulo: ");
-                                                al = sc.nextDouble();
-                                                if (al < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (al < 0);
-                                            Rectangulo di = new Rectangulo(bas,al,resul_D);
-                                            di.Rectangulo_Diagonal(bas,al,resul_D);
-                                            System.out.println("\nEl resultado del Perimetro es: "+ df.format(di.getDiago()));
+                                            }while (num2 < 0);
+                                            Rectangulo r = new Rectangulo(num1,num2);
+                                            System.out.println("\nEl resultado del Perimetro es: "+ df.format(r.getDiagonales()));
                                             break;
                                         case 4:
-                                            double resul = 0, diagome, ar;
                                             do {
                                                 System.out.print("\nIngrese el Diagonal Mayor del Rombo: ");
-                                                diagome = sc.nextDouble();
-                                                if ( diagome < 0){
+                                                num1 = sc.nextDouble();
+                                                if ( num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (diagome < 0);
+                                            }while (num1< 0);
                                             do {
                                                 System.out.print("Ingrese le Valor del Area del Rombo: ");
-                                                ar = sc.nextDouble();
-                                                if (ar < 0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (ar < 0);
-                                            Rombo diagonal1 = new Rombo(diagome,ar,resul);
-                                            diagonal1.RomboDiago(diagome,ar,resul);
-                                            System.out.println("\nEl resultado de la Diagonal Menor es: "+df.format(diagonal1.getDiagoR()));
+                                            }while (num2 < 0);
+                                            Rombo rombo = new Rombo(num1,num2);
+                                            System.out.println("\nEl resultado de la Diagonal Menor es: "+df.format(rombo.getDiagonales()));
                                             break;
                                         case 5:
-                                            double resultado4 = 0, aux = 0, lados;
                                             do {
                                                 System.out.print("\nIngrese el Valor del Lado del Triangulo: ");
-                                                lados = sc.nextDouble();
-                                                if (lados < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
 
                                                 }
-                                            }while (lados < 0);
-                                            Triangulo altura = new Triangulo(lados,resultado4,aux);
-                                            altura.Triangulo_Altura(lados,resultado4);
-                                            System.out.println("\nEl resultado de la Altura del Triangulo es: "+df.format(altura.getAltura_Trian()));
+                                            }while (num1 < 0);
+                                            Triangulo trian  = new Triangulo(num1,0,0);
+                                            System.out.println("\nEl resultado de la Altura del Triangulo es: "+df.format(trian.getDiagonales()));
                                             break;
                                         case 6:
-                                            double resultado6 = 0, alt, la1;
                                             do {
                                                 System.out.print("\nIngrese la Altura del Pentagono: ");
-                                                alt = sc.nextDouble();
-                                                if (alt < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (alt < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese el Lado del Pentagono: ");
-                                                la1 = sc.nextDouble();
-                                                if (la1 < 0 ){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (la1 <0);
-                                            Pentagono altura2 = new Pentagono(alt,la1,resultado6);
-                                            altura2.Pentagono_Apotema(alt,la1,resultado6);
-                                            System.out.println("\nEl resultado del Apotema del Pentagono es: "+df.format(altura2.getApotema_Penta()));
+                                            }while (num2 <0);
+                                            Pentagono pen = new Pentagono(num1,num2,0,0);
+                                            System.out.println("\nEl resultado del Apotema del Pentagono es: "+df.format(pen.getDiagonales()));
                                             break;
                                         case 7:
                                             do {
@@ -578,85 +547,82 @@ public class Main {
                                             System.out.println("\nEl resultado el Apotema del Hexagono es: "+df.format(h.getDiagonales()));
                                             break;
                                         case 8:
-                                            double resultado9 = 0, lad4, base2, angulo;
                                             do {
                                                 System.out.print("\nIngrese el Lado del Paralelogramo: ");
-                                                lad4 = sc.nextDouble();
-                                                if (lad4 < 0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 < 0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (lad4 < 0);
+                                            }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Base del Paralelogramo: ");
-                                                base2 = sc.nextDouble();
-                                                if (base2 <0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (base2 < 0);
+                                            }while (num2 < 0);
                                             do {
                                                 System.out.print("Ingrese el Angulo que se Opone del Paralelogramo: ");
-                                                angulo = sc.nextDouble();
-                                                if (angulo <0){
+                                                num3 = sc.nextDouble();
+                                                if (num3 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (angulo <0);
-                                            Paralelogramo diagonal2 = new Paralelogramo(lad4,base2,angulo);
-                                            diagonal2.Paralelogramo_Diagonal(lad4,base2,angulo,resultado9);
-                                            System.out.println("El resultado de la Diagonal del Paralelogramo es: "+df.format(diagonal2.getDiagonParale()));
+                                            }while (num3 <0);
+                                            Paralelogramo p = new Paralelogramo(num1,num2,num3);;
+                                            System.out.println("El resultado de la Diagonal del Paralelogramo es: "+df.format(p.getDiagonales()));
                                             break;
-                                        case 9:
-                                            double resultado10= 0,are1,M, m;
+
+
+
+                                            case 9:
                                             do {
                                                 System.out.print("\nIngfrese el Area del Trapecio: ");
-                                                are1 = sc.nextDouble();
-                                                if (are1 <0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (are1 <0);
+                                            }while (num1 <0);
                                             do {
                                                 System.out.print("Ingrese la Base Mayor del Trapecio: ");
-                                                M = sc.nextDouble();
-                                                if (M<0){
+                                                num2 = sc.nextDouble();
+                                                if (num2<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (M <0);
+                                            }while (num2 <0);
                                             do {
                                                 System.out.print("Ingrese la Base Menor del Trapecio: ");
-                                                m = sc.nextDouble();
-                                                if (m <0){
+                                                num3 = sc.nextDouble();
+                                                if (num3 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (m <0);
-                                            Trapecio altura4 = new Trapecio(are1,M,m,resultado10);
-                                            altura4.Trapecio_Altura(are1,M,m,resultado10);
-                                            System.out.println("\nEl resultado de la Altura del Trapecio es: "+df.format(altura4.getAlturaTrapecio()));
+                                            }while (num3 <0);
+                                            Trapecio tr = new Trapecio(num1,num2,num3,0,0);
+                                            System.out.println("\nEl resultado de la Altura del Trapecio es: "+df.format(tr.getDiagonales()));
                                             break;
                                         case 10:
-                                            double resul4 = 0, opu,ady1,hip;
                                             do {
                                                 System.out.print("\nIngrese el Cateto Opuesto del Triangulo Rectangulo: ");
-                                                opu = sc.nextDouble();
-                                                if (opu <0){
+                                                num1 = sc.nextDouble();
+                                                if (num1 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (opu <0);
+                                            }while (num1 <0);
                                             do {
                                                 System.out.print("Ingrese el Cateto Adyacentes del Triangulo Rectangulo: ");
-                                                ady1 = sc.nextDouble();
-                                                if (ady1 <0){
+                                                num2 = sc.nextDouble();
+                                                if (num2 <0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (ady1 <0);
+                                            }while (num2 <0);
                                             do {
                                                 System.out.print("Ingrese la Hipotenusa del Triangulo Rectangulo: ");
-                                                hip = sc.nextByte();
-                                                if (hip<0){
+                                                num3 = sc.nextByte();
+                                                if (num3<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (hip <0);
-                                            Triangulo_Rectan perimetro12 = new Triangulo_Rectan(opu,ady1,hip);
-                                            perimetro12.Triangulo_RectanPerimetro(opu, ady1,hip,resul4);
-                                            System.out.println("El resultado del Perimetro del Triangulo Rectangulo es: "+df.format(perimetro12.getPerimetroTriAn()));
+                                            }while (num3 <0);
+                                            Triangulo_Rectan TR = new Triangulo_Rectan(num1,num2,num3);
+                                            System.out.println("El resultado del Perimetro del Triangulo Rectangulo es: "+df.format(TR.getPerimetro()));
 
                                             break;
 
