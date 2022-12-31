@@ -123,12 +123,12 @@ public class Main {
                                             }while (num1 < 0);
                                             do {
                                                 System.out.print("Ingrese la Diagonal Menor del Rombo: ");
-                                                num1 = sc.nextDouble();
-                                                if (num1 < 0 ){
+                                                num2 = sc.nextDouble();
+                                                if (num2 < 0 ){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a ingresarlo porfavor");
                                                 }
-                                            }while (num1 < 0);
-                                            Rombo rombo = new Rombo(num1,0);
+                                            }while (num2 < 0);
+                                            Rombo rombo = new Rombo(num1,num2);
                                             System.out.println("\nEl resultado del Area del Rombo es: "+df.format(rombo.getArea()));
                                             break;
                                         case 5:
