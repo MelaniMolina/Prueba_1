@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class Operaciones {
+public abstract class Operaciones {
       double radio;
      double lado;
      double altura;
@@ -9,6 +9,15 @@ public class Operaciones {
      double apotemaB;
      double apotemaL;
      double resultado;
+     double volumen;
+
+    public double getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(double volumen) {
+        this.volumen = volumen;
+    }
 
     public void area(){}
 
@@ -46,11 +55,11 @@ public class Operaciones {
     }
 
     public double getArea() {
-        return area;
+        return resultado;
     }
 
     public void setArea(double area) {
-        this.area = area;
+        this.resultado = area;
     }
 
     public double getPerimetro() {

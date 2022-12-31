@@ -12,7 +12,6 @@ public class Cuadrado extends Figuras2D {
 
     @Override
     protected void calculararea(){
-        this.lado = lado;
         this.area = (pow(lado,2));
     }
     protected void calcularperimetro(){

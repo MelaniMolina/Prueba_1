@@ -10,7 +10,7 @@ public class Cubo extends Operaciones{
 
     @Override
     public void area() {
-        resultado=(Math.pow(lado, 2)) * 6;
+        area=(Math.pow(lado, 2)) * 6;
     }
 
     @Override

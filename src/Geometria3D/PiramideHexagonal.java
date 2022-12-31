@@ -2,50 +2,27 @@ package Geometria3D;
 
 public class PiramideHexagonal  extends Operaciones{
 
+    private double num1;
+    private double num2;
 
-        double ladoL=0;
-        double ladoB=0;
+    public PiramideHexagonal(double num1, double num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
 
-        double apotemaB=0;
-        double apotemaL=0;
-        double altura=0;
-
-        double resultado=0;
-
-        public PiramideHexagonal(double ladoL, double ladoB, double apotemaB, double apotemaL, double altura, double resultado) {
-            this.ladoL = ladoL;
-            this.ladoB = ladoB;
-            this.apotemaB = apotemaB;
-            this.apotemaL = apotemaL;
-            this.altura = altura;
-            this.resultado = resultado;
-        }
     @Override
         public void altura() {
-            this.ladoL = ladoL;
-            this.ladoB = ladoB;
-            this.apotemaB = apotemaB;
-            this.apotemaL = apotemaL;
-            this.altura = altura;
-            this.resultado = resultado;
+            this.resultado=Math.sqrt(Math.pow(num1,2)+Math.pow(num2,2));
         }
     @Override
         public void area() {
-            this.ladoL = ladoL;
-            this.ladoB = ladoB;
+            this.num1 = num1;
             this.apotemaB = apotemaB;
-            this.apotemaL = apotemaL;
-            this.altura = altura;
-            this.resultado = resultado;
+            this.resultado = (num1*num2)/2;
         }
     @Override
         public void volumen() {
-            this.ladoL = ladoL;
-            this.ladoB = ladoB;
-            this.apotemaB = apotemaB;
-            this.apotemaL = apotemaL;
-            this.altura = altura;
-            this.resultado = resultado;
+            this.volumen = (Math.sqrt(3)/2)*Math.pow(num1,2)*num2;
         }
 
 

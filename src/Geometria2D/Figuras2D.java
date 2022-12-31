@@ -22,7 +22,6 @@ public abstract class Figuras2D {
         }
         protected abstract void calculararea();
 
-
         public double getArea() {
             return area;
         }

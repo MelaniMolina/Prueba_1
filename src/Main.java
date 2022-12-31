@@ -622,12 +622,12 @@ public class Main {
                                                 }
                                             }while (num3 <0);
                                             Triangulo_Rectan TR = new Triangulo_Rectan(num1,num2,num3);
-                                            System.out.println("El resultado del Perimetro del Triangulo Rectangulo es: "+df.format(TR.getPerimetro()));
+                                            System.out.println("El resultado de la diagonal del Triangulo Rectangulo es: "+df.format(TR.getPerimetro()));
 
                                             break;
 
                                     }
-                                    System.out.println("\nDesea sea realizar el calculo de otro area 1.SI: ");
+                                    System.out.print("\nDesea sea realizar el calculo de otro area 1.SI: ");
                                     contin = sc.nextInt();
                                     System.out.println();
                                 }while (contin == 1);
@@ -666,9 +666,9 @@ public class Main {
                                     System.out.println("|\t5) Octaedro                 |");
                                     System.out.println("|\t6) Piramide Regular         |");
                                     System.out.println("|\t7) Cono                     |");
-                                    System.out.println("|\t8) Tronco Cono              |");
-                                    System.out.println("|\t9) Tronco Piramide          |");
-                                    System.out.println("|\t10) Prisma                  |");
+                                    System.out.println("|\t8) Piramide Hexagonal       |");
+                                    System.out.println("|\t9) Tronco Cono              |");
+                                    System.out.println("|\t10) Piramide Pentagonal     |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -680,19 +680,17 @@ public class Main {
                                     } while (op2 < 1 || op2 > 10);
                                     switch (op2) {
                                         case 1:
-                                            double lado=0, r=0;
+                                            double  r=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
-                                                lado = sc.nextDouble();
-                                                if (lado < 0) {
+                                                num1 = sc.nextDouble();
+                                                if (num1< 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            } while (lado < 0);
-                                            System.out.println("Ingrese el lado de su cubo: ");
-                                            lado= sc.nextDouble();
-                                            Cubo cubo=new Cubo(lado,r);
+                                            } while (num1 < 0);
+                                            Cubo cubo=new Cubo(num1,r);
                                             cubo.area();
-                                            System.out.println("EL area del cubo es: "+cubo.getResultado());
+                                            System.out.println("EL area del cubo es: "+cubo.getArea());
                                             break;
                                         case 2:
                                             double altura=0, result =0, radio=0;
@@ -713,8 +711,6 @@ public class Main {
                                             Cilindro cilindro = new Cilindro(altura,radio, result);
                                             cilindro.area();
                                             System.out.println("\nEl resultado del area es: " + df.format(cilindro.getResultado()));
-
-
                                             break;
                                         case 3:
                                             double lado1=0, resultad=0;
@@ -742,12 +738,8 @@ public class Main {
                                             Esfera esfera=new Esfera(rad,resu);
                                             esfera.area();
                                             System.out.println("\nEl resultado del  es: " + df.format(esfera.getResul()));
-
-
-
                                             break;
                                         case 5:
-
                                             double olado=0, oresultado=0;
                                             do {
                                                 System.out.print("\nIngrese el lado: ");
@@ -814,61 +806,74 @@ public class Main {
 
                                             break;
                                         case 8:
-                                            double G,g,altura14,resultado15=0, radioos=0;
                                             do{
-                                                System.out.print("\nIngrese el radio uno: ");
-                                                G=sc.nextDouble();
-                                                if (G <0){
+                                                System.out.print("\nIngrese el perimetro de la base: ");
+                                                num1=sc.nextDouble();
+                                                if (num1 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (G <0);
+                                            }while (num1<0);
                                             do{
-                                                System.out.print("Ingrese el radio dos: ");
-                                                g=sc.nextDouble();
-                                                if (g<0){
+                                                System.out.print("Ingrese el apotema de la primadie: ");
+                                                num2=sc.nextDouble();
+                                                if (num2 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (g <0);
-                                            do{
-                                                System.out.print("Ingrese la altura: ");
-                                                altura14=sc.nextDouble();
-                                                if (altura14<0){
-                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
-                                                }
-                                            }while (altura14 <0);
-                                            Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
-                                            co.Tronco_cono_Lateral();
-                                            System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
+                                            }while (num2<0);
+                                            PiramideHexagonal ph=new PiramideHexagonal(num1,num2);
+                                            ph.area();
+                                            System.out.println("\nEl resultado del area lateral es: " + df.format(ph.getArea()));
                                             break;
                                         case 9:
-                                            double G1,g1,altura15,resultado16=0, radioos1=0;
                                             do{
-                                                System.out.print("\nIngrese la base mayor: ");
-                                                G1=sc.nextDouble();
-                                                if (G1 <0){
+                                                System.out.print("\nIngrese el radio uno: ");
+                                                num1= sc.nextDouble();
+                                                if (num1 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (G1 <0);
+                                            }while (num1 <0);
                                             do{
-                                                System.out.print("Ingrese base menor: ");
-                                                g1=sc.nextDouble();
-                                                if (g1<0){
+                                                System.out.print("Ingrese el radio dos: ");
+                                                num2=sc.nextDouble();
+                                                if (num2 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (g1 <0);
+                                            }while (num2<0);
                                             do{
-                                                System.out.print("Ingrese lado uno: ");
-                                                altura15=sc.nextDouble();
-                                                if (altura15<0){
+                                                System.out.print("Ingrese el valor de la generatriz: ");
+                                                num3 = sc.nextDouble();
+                                                if (num3 < 0) {
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (altura15 <0);
-                                            Tronco_Piramide tr = new Tronco_Piramide(G1,g1,altura15,resultado16,radioos1);
-                                            tr.Tronco_Piramide_Laterak(G1,g1,altura15);
-                                            System.out.println("\nEl resultado del area lateral es: " + df.format(tr.getArea_lateral()));
+                                            }while (num3<0);
+                                            TroncoCono Tc = new TroncoCono(num1,num2,num3);
+                                            System.out.print("\nEl area del tronco cono es: " + Tc.getArea());
                                             break;
                                         case 10:
-
+                                            do{
+                                                System.out.print("\ningrese el valor del lado: ");
+                                                num1=sc.nextDouble();
+                                                if (num1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1<0);
+                                            do{
+                                                System.out.print("Ingrese el apotema de la base: ");
+                                                num2=sc.nextDouble();
+                                                if (num2 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num2<0);
+                                            do{
+                                                System.out.print("Ingrese el apotema de de la piramide: ");
+                                                num3=sc.nextDouble();
+                                                if (num3 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num3<0);
+                                            PiramidePentagonal Pp=new PiramidePentagonal(num1,num2,num3,0,0,0);
+                                            Pp.area();
+                                            System.out.print("\nEl area de la piramide pentagonal es: " + Pp.getArea());
                                             break;
                                     }
                                     System.out.print("\nDesea realizar otro ejericio de areas 1.SI: ");
@@ -877,7 +882,7 @@ public class Main {
                                 break;
                             case 2:
                                 do {
-                                    System.out.print("\t-/-/-/-/-/ SUBMENU PERIMETROS /-/-/-/-/-");
+                                    System.out.print("\t-/-/-/-/-/ SUBMENU PERIMETROS y APOTEMAS /-/-/-/-/-");
                                     System.out.println("\n");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     System.out.println("|\t1) Cubo                     |");
@@ -887,9 +892,9 @@ public class Main {
                                     System.out.println("|\t5) Octaedro                 |");
                                     System.out.println("|\t6) Piramide Regular         |");
                                     System.out.println("|\t7) Cono                     |");
-                                    System.out.println("|\t8) Tronco Cono              |");
-                                    System.out.println("|\t9) Tronco Piramide          |");
-                                    System.out.println("|\t10) Prisma                  |");
+                                    System.out.println("|\t8) Piramide hexagonal       |");
+                                    System.out.println("|\t9) Tronco Cono(area lateral)|");
+                                    System.out.println("|\t10) Piramide Pentagonal     |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -1029,37 +1034,67 @@ public class Main {
 
                                             break;
                                         case 8:
-                                            double G,g,altura14,resultado15=0, radioos=0;
                                             do{
-                                                System.out.print("\nIngrese el radio uno: ");
-                                                G=sc.nextDouble();
-                                                if (G <0){
+                                                System.out.print("\nIngerse el valor de la altura: ");
+                                                num1=sc.nextDouble();
+                                                if (num1<0){
+                                                    System.out.print("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1<0);
+                                            do {
+                                                System.out.print("Ingese el valor del apotema de la base: ");
+                                                num2= sc.nextDouble();
+                                                if (num2<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (G <0);
-                                            do{
-                                                System.out.print("Ingrese el radio dos: ");
-                                                g=sc.nextDouble();
-                                                if (g<0){
-                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
-                                                }
-                                            }while (g <0);
-                                            do{
-                                                System.out.print("Ingrese la altura: ");
-                                                altura14=sc.nextDouble();
-                                                if (altura14<0){
-                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
-                                                }
-                                            }while (altura14 <0);
-                                            Tronco_cono co = new Tronco_cono(G,g,altura14,resultado15);
-                                            co.Tronco_cono_Lateral();
-                                            System.out.println("\nEl resultado del area lateral es: " + df.format(co.getArea_lateralTC()));
+                                            }while (num2<0);
+                                            PiramideHexagonal ph=new PiramideHexagonal(num1,num2);
+                                            ph.altura();
+                                            System.out.println("\nEl valor del apotema de la piramide es: " + ph.getResultado());
                                             break;
                                         case 9:
-
+                                            do{
+                                                System.out.print("\nIngrese el valor del radio de la base mayor: ");
+                                                num1= sc.nextDouble();
+                                                if (num1<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1<0);
+                                            do {
+                                                System.out.print("Ingrese el radio de la base menor: ");
+                                                num2= sc.nextDouble();
+                                                if (num2<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num2<0);
+                                            do {
+                                                System.out.print("Ingrese el valor de la generatriz: ");
+                                                num3= sc.nextDouble();
+                                                if (num3<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num3<0);
+                                            TroncoCono Co=new TroncoCono(num1,num2,num3);
+                                            System.out.println("\nEl valor del area lateral es: " + Co.getResultado());
                                             break;
                                         case 10:
-
+                                            do {
+                                                System.out.print("\nIngrese la altura: ");
+                                                num1= sc.nextDouble();
+                                                if (num1<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1<0);
+                                            do {
+                                                System.out.print("Ingrese el valor del apotema de la base: ");
+                                                num2= sc.nextDouble();
+                                                if (num2<0){
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num2<0);
+                                            PiramidePentagonal Pt=new PiramidePentagonal(num1,num2,0,0,0,0);
+                                            Pt.altura();
+                                            System.out.println("\nEl apotema de la piramide pentagonal es: " + Pt.getAltura());
                                             break;
                                     }
                                     System.out.print("\nDesea realizar otro ejericio de Perimetros 1.SI: ");
@@ -1078,9 +1113,9 @@ public class Main {
                                     System.out.println("|\t5) Octaedro                 |");
                                     System.out.println("|\t6) Piramide Regular         |");
                                     System.out.println("|\t7) Cono                     |");
-                                    System.out.println("|\t8) Tronco Cono              |");
-                                    System.out.println("|\t9)                 |");
-                                    System.out.println("|\t10)     |");
+                                    System.out.println("|\t8) Piramide Hexagonal       |");
+                                    System.out.println("|\t9) Tronco Cono              |");
+                                    System.out.println("|\t10) Piramide Pentagonal     |");
                                     System.out.println("|/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-|");
                                     do {
                                         System.out.println("Selecione una Opcion");
@@ -1222,40 +1257,76 @@ public class Main {
                                             cono.volumen();
                                             System.out.println("\nEl resultado del volumen es: " + df.format(cono.getResultado()));
 
-
                                             break;
                                         case 8:
-                                            double G,g,altura12,resultado13=0;
-                                            do{
-                                                System.out.print("\nIngrese el radio uno: ");
-                                                G=sc.nextDouble();
-                                                if (G <0){
+                                            do {
+                                                System.out.print("\nIngerse el valor del lado: ");
+                                                num1 = sc.nextDouble();
+                                                if (num1<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (G <0);
+                                            }while (num1<0);
                                             do{
-                                                System.out.print("Ingrese el radio dos: ");
-                                                g=sc.nextDouble();
-                                                if (g<0){
+                                                System.out.print("Ingese el valor de la altura: ");
+                                                num2= sc.nextDouble();
+                                                if (num2<0){
                                                     System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
                                                 }
-                                            }while (g <0);
-                                            do{
-                                                System.out.print("Ingrese la altura: ");
-                                                altura12=sc.nextDouble();
-                                                if (altura12<0){
-                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
-                                                }
-                                            }while (altura12 <0);
-                                            Tronco_cono t = new Tronco_cono(G,g,altura12,resultado13);
-                                            t.Tronco_cono_Volumen(G,g,altura12);
-                                            System.out.println("\nEl resultado del volumen es: " + df.format(t.getVolumen_TC()));
+                                            }while (num2<0);
+                                            PiramideHexagonal px=new PiramideHexagonal(num1,num2);
+                                            px.volumen();
+                                            System.out.println("\nEl resultado del volumen es: " + df.format(px.getVolumen()));
                                             break;
                                         case 9:
-
+                                            do{
+                                                System.out.print("\nIngrese el radio uno: ");
+                                                num1= sc.nextDouble();
+                                                if (num1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1 <0);
+                                            do{
+                                                System.out.print("Ingrese el radio dos: ");
+                                                num2=sc.nextDouble();
+                                                if (num2 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num2<0);
+                                            do{
+                                                System.out.print("Ingrese el valor de la altura: ");
+                                                num3 = sc.nextDouble();
+                                                if (num3 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num3<0);
+                                            TroncoCono Tc = new TroncoCono(num1,num2,num3);
+                                            Tc.volumen();
+                                            System.out.print("\nEl area del tronco cono es: " + Tc.getResultado());
                                             break;
                                         case 10:
-
+                                            do{
+                                                System.out.print("\nIngrese el lado: ");
+                                                num1= sc.nextDouble();
+                                                if (num1 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num1<0);
+                                            do{
+                                                System.out.print("Ingrese el apotema: ");
+                                                num2= sc.nextDouble();
+                                                if (num2 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num2<0);
+                                            do {
+                                                System.out.print("Ingrese la altura: ");
+                                                num3= sc.nextDouble();
+                                                if (num3 < 0) {
+                                                    System.out.println("\nEl valor ingresado es incorrecto vuelva a intentarlo por favor");
+                                                }
+                                            }while (num3<0);
+                                            PiramidePentagonal pt = new PiramidePentagonal(num1,num2,num3,0,0,0);
+                                            System.out.println("\nEl valor del volumen de la piramide es: " + pt.getResultado());
                                             break;
                                     }
                                     System.out.print("\nDesea realizar otro ejericio de volumenes 1.SI: ");
@@ -1275,17 +1346,6 @@ public class Main {
         }
 
     }
-/*
-        System.out.println("Ingrese el lado de su cubo: ");
-        double lado= sc.nextDouble();
-        Cubo cubo=new Cubo(lado,0);
-        cubo.area();
-        System.out.println("EL area del cubo es: "+cubo.getResultado());
-        cubo.perimetro();
-        System.out.println("El perimetro del cubo es: "+cubo.getResultado());
-        cubo.volumen();
-        System.out.println("El columen del cubo es: "+cubo.getResultado());*/
 
 }
 
-}
